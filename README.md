@@ -1,6 +1,6 @@
 # ConvNeXt medicinal plant prototype
-Status: development scaffold, not a completed classifier. No trained or validated
-checkpoint yet. Three medicinal records have partial source checks; remaining records and regional names are pending curation. The UI/API preview is deployed; identification remains unavailable until a trained and evaluated checkpoint passes the release gate.
+Status: development prototype, not a completed classifier. Experimental full ConvNeXt-Tiny fine-tuning completed locally, but class failures prevent a reliable release. All ten medicinal records have partial source checks; most regional names are pending. Source and tests are pushed. The updated ten-plant knowledge library is live and visually verified on desktop and phone; live identification remains unavailable. See the work log and release checklist below.
+
 
 ## Preview
 
@@ -90,3 +90,11 @@ This log describes work actually performed, not a claim of project completion.
 - Complete regional-name/source review and optional crop controls. Automatic segmentation is not implemented.
 
 The README is a running record and will be reconciled with the final live state. No93.2% accuracy,500-800images/class or2.5-hour training claim is reproduced here.
+
+
+## Dataset snapshot delivery
+`data/dataset-v0.3/` contains the627-photo experimental snapshot manifest, per-photo attribution/licenses and dataset card.95new training-only additions target weak classes; prior holdout rows stay unchanged. This snapshot is not the final expert-validated dataset. The versioned release packages exact medium-resolution source bytes with credits and SHA256 checksums; no paid LFS. `python scripts/package_dataset.py` rebuilds from public source URLs and fails if bytes change. Distribution uses three small ZIPs; extract all into one folder. Existing test/new_test splits are already-read development history, not a new final benchmark.
+
+Live library verification: all10 partial records can be opened independently of prediction. ONNX engineering smoke:10validation photos had matching PyTorch/runtime top1 with worst absolute logit difference1.91e-6; runtime-only local peakRSS~224MiB. This is not test accuracy, calibration, or a Render memory/latency measurement.
+
+Additional problems: the existing-file web editor duplicated a large source-transfer payload, causing a workflow failure. A fresh checksum-verified file transferred correctly, then removed the temporary files. Browser release asset upload did not accept files, so a reproducible manifest-only packaging workflow is used instead. Scientific release gates were not relaxed to hide publishing or class failures.
