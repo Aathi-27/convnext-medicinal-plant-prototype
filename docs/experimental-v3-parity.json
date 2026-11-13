@@ -1,0 +1,68 @@
+{
+  "n": 10,
+  "all_top1_match": true,
+  "max_abs_logit_difference": 5.4836273193359375e-06,
+  "results": [
+    {
+      "species_id": "tulsi",
+      "photo_id": "7caea86d8d3b66fffd3bc131a232f4467fc5baa7",
+      "top1_match": true,
+      "max_abs_logit_difference": 1.430511474609375e-06
+    },
+    {
+      "species_id": "neem",
+      "photo_id": "961eee39540adec7ce72ee47e61b0e82cd0adb53",
+      "top1_match": true,
+      "max_abs_logit_difference": 2.384185791015625e-06
+    },
+    {
+      "species_id": "turmeric",
+      "photo_id": "85a8809bfd5efbdf3539c4fbe10f48d5c596d62a",
+      "top1_match": true,
+      "max_abs_logit_difference": 2.1457672119140625e-06
+    },
+    {
+      "species_id": "ashwagandha",
+      "photo_id": "ce3afa1b9475cd1d238b3afb57a37e630c324b77",
+      "top1_match": true,
+      "max_abs_logit_difference": 2.384185791015625e-06
+    },
+    {
+      "species_id": "brahmi",
+      "photo_id": "9d10956302d67ad39ecdbab4aa33729347a51fcc",
+      "top1_match": true,
+      "max_abs_logit_difference": 4.0531158447265625e-06
+    },
+    {
+      "species_id": "bael",
+      "photo_id": "d2f0e6c54c2b5340d296dc1b9fa3f81c32cb6ec5",
+      "top1_match": true,
+      "max_abs_logit_difference": 1.6689300537109375e-06
+    },
+    {
+      "species_id": "peppermint",
+      "photo_id": "5a6269357de22a62b94e50f52f404514cde6c48b",
+      "top1_match": true,
+      "max_abs_logit_difference": 4.5299530029296875e-06
+    },
+    {
+      "species_id": "lemon_balm",
+      "photo_id": "bfb64c2f87ea78b49a2b929cff8d39c73c716da5",
+      "top1_match": true,
+      "max_abs_logit_difference": 2.6226043701171875e-06
+    },
+    {
+      "species_id": "stevia",
+      "photo_id": "4d7b93d946bd48839e9436a97c77c3f48ef2e853",
+      "top1_match": true,
+      "max_abs_logit_difference": 5.4836273193359375e-06
+    },
+    {
+      "species_id": "catnip",
+      "photo_id": "ceece5eeff4683c41ad5d72e48f4b99826848f87",
+      "top1_match": true,
+      "max_abs_logit_difference": 2.6226043701171875e-06
+    }
+  ],
+  "caveat": "Engineering parity, not new accuracy or reliability evidence"
+}
