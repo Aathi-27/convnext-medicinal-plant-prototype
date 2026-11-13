@@ -1,6 +1,12 @@
 # ConvNeXt medicinal plant prototype
 Status: development scaffold, not a completed classifier. No trained or validated
-checkpoint yet. Medicinal records are pending curation. No deployment has happened.
+checkpoint yet. Three medicinal records have partial source checks; remaining records and regional names are pending curation. The UI/API preview is deployed; identification remains unavailable until a trained and evaluated checkpoint passes the release gate.
+
+## Preview
+
+https://convnext-medicinal-plant-prototype.onrender.com/
+
+Render Free may sleep after inactivity and take about a minute to wake. This is a UI/API preview, not a working plant identifier.
 
 ## What works locally
 Approved green/ivory React UI, upload/camera file selection, image validation,
@@ -34,7 +40,7 @@ GPU training environment: requirements-train.txt; install CPU/GPU torch wheels a
 No accuracy guarantee. Keep test data untouched until model/threshold selection is frozen.
 
 ## Hosting proposal
-Render free with ONNX-only inference is the preferred trial, not yet deployed or guaranteed.
+The UI/API preview is on Render Free. Trained ONNX inference has not yet been deployed or validated there.
 512 MB memory and idle cold starts apply. See docs/runtime-benchmark.json for LOCAL
 UNTRAINED architecture sizing only. Never use that benchmark model for identification.
 No AWS is required. No paid upgrade is authorized.
@@ -44,3 +50,9 @@ Dataset coverage/content review; trained checkpoint; held-out evaluation; ONNX p
 calibration/rejection threshold; medicinal record curation; in-app crop control; production
 security/load tests; deployment/account verification.
 "Leaf study" remains a placeholder display name. Hero art is illustrative, not a specimen.
+
+## Internal pilot, not released identification
+
+A small frozen-feature ConvNeXt-Tiny baseline was trained to exercise the pipeline, not to reproduce report accuracy. See `docs/pilot-evaluation.json` for exact small-sample results and limits. It is not installed in the live service. The manifest uses community labels and provisional visual content screening, not expert botanical verification.
+
+To reproduce from the repository root: install training dependencies; `python scripts/fetch_pilot_images.py`; then `python training/pilot_frozen_features.py --manifest data/pilot-manifest.json --out artifacts/pilot`. Images keep their individual CC BY-SA4.0 terms and attribution. No checkpoint is published. Full fine-tuning, more data and external validation remain pending.

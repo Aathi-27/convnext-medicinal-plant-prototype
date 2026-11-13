@@ -37,35 +37,59 @@
     "id": "turmeric",
     "common_name": "Turmeric",
     "scientific_name": "Curcuma longa",
-    "review_status": "pending",
+    "review_status": "source_checked_partial",
     "names": {
       "tamil": null,
       "sanskrit": null
     },
-    "traditional_uses": [],
-    "constituents": [],
-    "safety_notes": [
-      "Identification aid only. Do not consume or use based on a model prediction."
+    "traditional_uses": [
+      "Historically used in several traditional medicine systems, including Ayurveda, for indigestion and other conditions. This is historical use, not a treatment recommendation."
     ],
-    "sources": [],
-    "notice": "Medicinal details are not yet curated. No unsupported claims are shown."
+    "constituents": [
+      "Curcuminoids, including curcumin"
+    ],
+    "safety_notes": [
+      "Identification aid only. Do not consume or use based on a model prediction.",
+      "Medicinal evidence usually concerns rhizome or prepared extracts, not a leaf photo.",
+      "Some highly bioavailable curcumin products have been linked to liver injury. Turmeric supplements may be unsafe during pregnancy."
+    ],
+    "sources": [
+      {
+        "title": "NCCIH: Turmeric",
+        "url": "https://www.nccih.nih.gov/health/turmeric"
+      }
+    ],
+    "notice": "NCCIH says evidence is not sufficient for definitive conclusions about health benefits. Leaf identification does not establish the composition or safety of a preparation.",
+    "reviewed_on": "2026-11-13"
   },
   "ashwagandha": {
     "id": "ashwagandha",
     "common_name": "Ashwagandha",
     "scientific_name": "Withania somnifera",
-    "review_status": "pending",
+    "review_status": "source_checked_partial",
     "names": {
       "tamil": null,
       "sanskrit": null
     },
-    "traditional_uses": [],
-    "constituents": [],
-    "safety_notes": [
-      "Identification aid only. Do not consume or use based on a model prediction."
+    "traditional_uses": [
+      "Used in traditional Ayurvedic medicine. Traditional use is not proof of clinical benefit."
     ],
-    "sources": [],
-    "notice": "Medicinal details are not yet curated. No unsupported claims are shown."
+    "constituents": [
+      "Withanolides"
+    ],
+    "safety_notes": [
+      "Identification aid only. Do not consume or use based on a model prediction.",
+      "Avoid during pregnancy and breastfeeding. Liver injury has been reported with supplements.",
+      "May interact with medicines and may be unsuitable with thyroid or autoimmune disorders. Consult a qualified clinician."
+    ],
+    "sources": [
+      {
+        "title": "NCCIH: Ashwagandha",
+        "url": "https://www.nccih.nih.gov/health/ashwagandha"
+      }
+    ],
+    "notice": "NCCIH reports evidence for some preparations in stress and insomnia, but evidence varies by preparation and does not establish a benefit from an identified leaf.",
+    "reviewed_on": "2026-11-13"
   },
   "brahmi": {
     "id": "brahmi",
@@ -105,18 +129,30 @@
     "id": "peppermint",
     "common_name": "Peppermint",
     "scientific_name": "Mentha × piperita",
-    "review_status": "pending",
+    "review_status": "source_checked_partial",
     "names": {
       "tamil": null,
       "sanskrit": null
     },
-    "traditional_uses": [],
-    "constituents": [],
-    "safety_notes": [
-      "Identification aid only. Do not consume or use based on a model prediction."
+    "traditional_uses": [
+      "Mint plants and peppermint oil have a history of use for digestive complaints. Traditional use is not proof that peppermint leaves treat a condition."
     ],
-    "sources": [],
-    "notice": "Medicinal details are not yet curated. No unsupported claims are shown."
+    "constituents": [
+      "Menthol is present in peppermint oil; composition is not measured by this app."
+    ],
+    "safety_notes": [
+      "Identification aid only. Do not consume or use based on a model prediction.",
+      "Evidence on enteric-coated peppermint oil is not evidence for using a raw leaf.",
+      "Peppermint oil can cause heartburn, irritation or allergic reactions. Do not apply it to the face of infants or young children."
+    ],
+    "sources": [
+      {
+        "title": "NCCIH: Peppermint Oil",
+        "url": "https://www.nccih.nih.gov/health/peppermint-oil"
+      }
+    ],
+    "notice": "NCCIH reports very little research on peppermint leaf and insufficient evidence to determine its usefulness for any health condition.",
+    "reviewed_on": "2026-11-13"
   },
   "lemon_balm": {
     "id": "lemon_balm",

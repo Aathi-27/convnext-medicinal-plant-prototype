@@ -13,3 +13,5 @@ artifacts/*
 *.pt
 *.onnx
 *.zip
+
+data/pilot-images/
