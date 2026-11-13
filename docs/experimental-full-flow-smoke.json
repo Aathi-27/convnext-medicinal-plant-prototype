@@ -1,0 +1,14 @@
+{
+  "health": {
+    "ok": true,
+    "model_ready": true,
+    "architecture": "convnext_tiny",
+    "experimental": true
+  },
+  "actual_checkpoint_prediction": true,
+  "notes_hidden_before_candidate_review": true,
+  "notes_loaded_after_candidate_selection": true,
+  "mobile_overflow": false,
+  "local_only": true,
+  "public_behavior_changed": false
+}

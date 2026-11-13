@@ -23,14 +23,19 @@ def preprocess(raw:bytes):
 
 class Classifier:
  def __init__(self,directory):
-  self.directory=Path(directory);self.session=None;self.meta=None
+  self.directory=Path(directory);self.session=None;self.meta=None;self.experimental=False
   config=self.directory/'model.json'
   if not config.exists():return
   self.meta=json.loads(config.read_text());model=self.directory/self.meta['file']
   if self.meta.get('architecture')!='convnext_tiny' or not self.meta.get('trained'):raise ValueError('Only a trained ConvNeXt-Tiny artifact is accepted.')
   if self.meta.get('species_ids')!=[s['id'] for s in SPECIES]:raise ValueError('Model class order must match the species registry.')
   if hashlib.sha256(model.read_bytes()).hexdigest()!=self.meta['sha256']:raise ValueError('Model checksum mismatch.')
-  if not isinstance(self.meta.get('confidence_threshold'),(int,float)):raise ValueError('Validation-derived threshold is missing.')
+  self.experimental=self.meta.get('release_status')=='experimental'
+  if self.experimental:
+   if os.getenv('ALLOW_EXPERIMENTAL_MODEL')!='1':raise ValueError('Experimental artifacts require explicit opt-in; not a validated release.')
+  elif self.meta.get('release_status')!='validated' or not self.meta.get('release_review_complete'):
+   raise ValueError('Model release review is incomplete.')
+  if not self.experimental and (not isinstance(self.meta.get('confidence_threshold'),(int,float)) or not 0<=self.meta['confidence_threshold']<=1):raise ValueError('Validation-derived threshold is missing.')
   import onnxruntime as ort
   opt=ort.SessionOptions();opt.intra_op_num_threads=1;opt.inter_op_num_threads=1;opt.enable_cpu_mem_arena=False
   self.session=ort.InferenceSession(str(model),sess_options=opt,providers=['CPUExecutionProvider'])
@@ -38,5 +43,5 @@ class Classifier:
   logits=self.session.run(None,{'image':image})[0][0]
   probs=np.exp(logits-np.max(logits));probs/=probs.sum();order=np.argsort(probs)[::-1]
   results=[{**SPECIES[int(i)],'score':float(probs[i])} for i in order[:3]]
-  uncertain=results[0]['score']<self.meta['confidence_threshold']
-  return {'status':'uncertain' if uncertain else 'candidate','candidates':results,'model_version':self.meta['version'],'warning':'A model score is not proof of identity. Do not consume or use a plant based on this prediction.'}
+  uncertain=self.experimental or results[0]['score']<self.meta['confidence_threshold']
+  return {'status':'uncertain' if uncertain else 'candidate','experimental':self.experimental,'requires_species_review':True,'candidates':results,'model_version':self.meta['version'],'warning':'A model score is not proof of identity. Do not consume or use a plant based on this prediction.'}

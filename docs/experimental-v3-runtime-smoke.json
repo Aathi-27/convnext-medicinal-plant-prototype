@@ -1,0 +1,70 @@
+{
+  "artifact_sha256": "4f6ea859eab720f0dc6b8daaccfe6f85aaec61a422bae57f3b9a68b3a76b5eed",
+  "median_inference_seconds": 0.07807748900040679,
+  "peak_rss_kib": 274032,
+  "n": 10,
+  "all_uncertain": true,
+  "predictions": [
+    {
+      "photo_id": "7caea86d8d3b66fffd3bc131a232f4467fc5baa7",
+      "species_id": "tulsi",
+      "top1": "stevia",
+      "status": "uncertain"
+    },
+    {
+      "photo_id": "961eee39540adec7ce72ee47e61b0e82cd0adb53",
+      "species_id": "neem",
+      "top1": "neem",
+      "status": "uncertain"
+    },
+    {
+      "photo_id": "85a8809bfd5efbdf3539c4fbe10f48d5c596d62a",
+      "species_id": "turmeric",
+      "top1": "turmeric",
+      "status": "uncertain"
+    },
+    {
+      "photo_id": "ce3afa1b9475cd1d238b3afb57a37e630c324b77",
+      "species_id": "ashwagandha",
+      "top1": "ashwagandha",
+      "status": "uncertain"
+    },
+    {
+      "photo_id": "9d10956302d67ad39ecdbab4aa33729347a51fcc",
+      "species_id": "brahmi",
+      "top1": "brahmi",
+      "status": "uncertain"
+    },
+    {
+      "photo_id": "d2f0e6c54c2b5340d296dc1b9fa3f81c32cb6ec5",
+      "species_id": "bael",
+      "top1": "neem",
+      "status": "uncertain"
+    },
+    {
+      "photo_id": "5a6269357de22a62b94e50f52f404514cde6c48b",
+      "species_id": "peppermint",
+      "top1": "peppermint",
+      "status": "uncertain"
+    },
+    {
+      "photo_id": "bfb64c2f87ea78b49a2b929cff8d39c73c716da5",
+      "species_id": "lemon_balm",
+      "top1": "lemon_balm",
+      "status": "uncertain"
+    },
+    {
+      "photo_id": "4d7b93d946bd48839e9436a97c77c3f48ef2e853",
+      "species_id": "stevia",
+      "top1": "stevia",
+      "status": "uncertain"
+    },
+    {
+      "photo_id": "ceece5eeff4683c41ad5d72e48f4b99826848f87",
+      "species_id": "catnip",
+      "top1": "catnip",
+      "status": "uncertain"
+    }
+  ],
+  "caveat": "Local CPU engineering smoke, not AWS benchmark or accuracy estimate"
+}
