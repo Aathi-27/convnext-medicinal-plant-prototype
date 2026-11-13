@@ -542,7 +542,7 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git rm --ignore-unmatch .github/workflows/commons-source.yml
-          git add README.md docs scripts .github/workflows/dataset-release.yml
+          git add README.md docs scripts
           git commit -m 'Record all-ten-class source-shift failure and dataset release preparation'
           git push
       - name: Package verified attributed690-image snapshot
