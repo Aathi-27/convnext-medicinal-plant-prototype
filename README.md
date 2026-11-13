@@ -1,12 +1,14 @@
 # ConvNeXt medicinal plant prototype
-Status: development prototype, not a completed classifier. Experimental full ConvNeXt-Tiny fine-tuning completed locally, but class failures prevent a reliable release. All ten medicinal records have partial source checks; most regional names are pending. Source and tests are pushed. The updated ten-plant knowledge library is live and visually verified on desktop and phone; live identification remains unavailable. See the work log and release checklist below.
+Status: working experimental engineering prototype, not a reliable botanical classifier. Genuine ConvNeXt-Tiny predictions, source-linked educational notes and the ten-plant library are served by a short-lived AWS demo. Generalization checks failed; plant identity remains unverified. Most regional names and expert botanical review remain pending.
 
+## Current demo and source
 
-## Preview
+- HTTPS demo: https://43.205.119.98/ . Approved for one day only, due for deletion by2026-11-1500:23IST. It is not permanent hosting.
+- The earlier Render preview https://convnext-medicinal-plant-prototype.onrender.com/ remains a UI/API preview with predictions disabled.
+-690-image attributed experimental dataset: https://github.com/Aathi-27/convnext-medicinal-plant-prototype/releases/tag/dataset-v0.4-experimental . Includes split manifests, hashes, credits and licenses. Community labels are not expert confirmation.
+- Optional consented photo-check code is in `app/external.py`; deployment verification is in progress as this source update is prepared. It uses the shared Possible matches layout, not false attribution to ConvNeXt. Details and safeguards: `docs/external-fallback.md`.
 
-https://convnext-medicinal-plant-prototype.onrender.com/
-
-Render Free may sleep after inactivity and take about a minute to wake. This is a UI/API preview, not a working plant identifier.
+The dated experiment sections below record earlier states, including failed audits and times when inference was not deployed. This current-status section supersedes those earlier deployment statements. This is a time-boxed prototype, not a report-accuracy reproduction or a production service.
 
 ## What works locally
 Approved green/ivory React UI, upload/camera file selection, image validation,
@@ -39,16 +41,14 @@ Train after reviewed CSV exists: `python training/train.py --manifest data/revie
 GPU training environment: requirements-train.txt; install CPU/GPU torch wheels as appropriate.
 No accuracy guarantee. Keep test data untouched until model/threshold selection is frozen.
 
-## Hosting proposal
+## Earlier hosting proposal (superseded by the one-day demo above)
 The UI/API preview is on Render Free. Trained ONNX inference has not yet been deployed or validated there.
 512 MB memory and idle cold starts apply. See docs/runtime-benchmark.json for LOCAL
 UNTRAINED architecture sizing only. Never use that benchmark model for identification.
 No AWS is required. No paid upgrade is authorized.
 
-## Known incomplete work
-Dataset coverage/content review; trained checkpoint; held-out evaluation; ONNX parity;
-calibration/rejection threshold; medicinal record curation; in-app crop control; production
-security/load tests; deployment/account verification.
+## Remaining research and production work
+Expert botanical labeling and independent phone-photo evaluation; calibrated rejection thresholds; medicinal record curation; in-app crop controls; production security and load tests. Experimental checkpoint training, ONNX inference and a small number of host smoke tests are complete, not reliable classification validation.
 "Leaf study" remains a placeholder display name. Hero art is illustrative, not a specimen.
 
 ## Internal pilot, not released identification
@@ -137,3 +137,13 @@ The initial48-photo provisional pool became46BEFORE prediction: one peppermint f
 More epochs are not the next data-quality fix. Needed next: a botanically checked mint/Ashwagandha collection with multiple leaves, whole-plant context and reproductive details where needed, plus a separately contributed phone-photo evaluation set. Do not relabel from model guesses or apparent leaf similarity. New expert work or purchases need separate approval. Existing test/audit samples must not be recycled into a new final accuracy claim.
 
 The v0.4experimental release packaging now targets all690attributed images with exact downloaded-byte hashes, split metadata, licenses and credits. It is a research snapshot, not a final expert dataset.
+
+### One-day experimental deployment and optional photo check (Nov14)
+
+The existing v0.3experimental ONNX was privately transferred with checksum verification to the approved Mumbai Ubuntu2GB demo. It is still experimental: the Tulsi smoke photo was wrongly ranked Stevia, and no accuracy claim is made. HTTPS and post-security-update reboot checks succeeded; the same IP was retained. The temporary demo is due for deletion after one day. The model is not published as a reliable release.
+
+The owner chose an existing external key for an optional image check. It remains server-side in a readonly secret file, never frontend code, logs or this repository. The account was verified Free; no paid upgrade occurred. Inference-only Zero Data Retention was enabled with approval; the broader global setting and unrelated data-storage features were left unchanged. An earlier access check returned403without proving expiration; a later modelsGET and one public-photo inference returned200, so no replacement key was created. The one-photo result was a tentative turmeric suggestion, not validation.
+
+The UI uses a common Possible matches layout with neutral wording and a photo-sharing consent control. No external transfer happens by default. Failed external requests preserve the local result. External AI scores are not blended with local scores or treated as measured certainty. Notes open only for exact supported scientific names. The API has image validation, metadata removal, fixed model, timeout, strict response parsing, and persistent demo-wide3/minute and60/rolling24h attempt caps.25automated tests and the frontend build passed locally. Live fallback verification remains a separate deployment check, not implied by a source commit.
+
+Two historical source-publication workflows passed their tests/build but failed at the final push because the automation could not modify unrelated workflow files without additional permissions. They were corrected by leaving those workflows out of the automated source commit; later source publication, dataset packaging and ordinary CI passed. Historical failure notifications can remain visible after a successful corrected run.

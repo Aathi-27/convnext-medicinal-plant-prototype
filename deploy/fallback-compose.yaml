@@ -1,0 +1,12 @@
+# Apply in addition to existing deploy/compose.yaml. No key value belongs here.
+services:
+  app:
+    environment:
+      EXTERNAL_FALLBACK_ENABLED: '1'
+      GROQ_API_KEY_FILE: /run/secrets/groq_api_key
+      FALLBACK_STATE_DB: /state/fallback.sqlite3
+    volumes:
+      - ${GROQ_KEY_PATH:?Set path to existing secret file outside source tree}:/run/secrets/groq_api_key:ro
+      - fallback-state:/state
+volumes:
+  fallback-state:
