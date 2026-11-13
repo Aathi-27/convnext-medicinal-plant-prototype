@@ -42,5 +42,5 @@ No AWS is required. No paid upgrade is authorized.
 ## Known incomplete work
 Dataset coverage/content review; trained checkpoint; held-out evaluation; ONNX parity;
 calibration/rejection threshold; medicinal record curation; in-app crop control; production
-security/load tests; GitHub destination/visibility; deployment/account verification.
+security/load tests; deployment/account verification.
 "Leaf study" remains a placeholder display name. Hero art is illustrative, not a specimen.

@@ -1,0 +1,12 @@
+[
+ {"id":"tulsi","common_name":"Tulsi","scientific_name":"Ocimum tenuiflorum"},
+ {"id":"neem","common_name":"Neem","scientific_name":"Azadirachta indica"},
+ {"id":"turmeric","common_name":"Turmeric","scientific_name":"Curcuma longa"},
+ {"id":"ashwagandha","common_name":"Ashwagandha","scientific_name":"Withania somnifera"},
+ {"id":"brahmi","common_name":"Brahmi","scientific_name":"Bacopa monnieri"},
+ {"id":"bael","common_name":"Bael","scientific_name":"Aegle marmelos"},
+ {"id":"peppermint","common_name":"Peppermint","scientific_name":"Mentha × piperita"},
+ {"id":"lemon_balm","common_name":"Lemon Balm","scientific_name":"Melissa officinalis"},
+ {"id":"stevia","common_name":"Stevia","scientific_name":"Stevia rebaudiana"},
+ {"id":"catnip","common_name":"Catnip","scientific_name":"Nepeta cataria"}
+]

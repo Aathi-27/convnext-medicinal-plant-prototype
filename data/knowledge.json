@@ -1,0 +1,172 @@
+{
+  "tulsi": {
+    "id": "tulsi",
+    "common_name": "Tulsi",
+    "scientific_name": "Ocimum tenuiflorum",
+    "review_status": "pending",
+    "names": {
+      "tamil": null,
+      "sanskrit": null
+    },
+    "traditional_uses": [],
+    "constituents": [],
+    "safety_notes": [
+      "Identification aid only. Do not consume or use based on a model prediction."
+    ],
+    "sources": [],
+    "notice": "Medicinal details are not yet curated. No unsupported claims are shown."
+  },
+  "neem": {
+    "id": "neem",
+    "common_name": "Neem",
+    "scientific_name": "Azadirachta indica",
+    "review_status": "pending",
+    "names": {
+      "tamil": null,
+      "sanskrit": null
+    },
+    "traditional_uses": [],
+    "constituents": [],
+    "safety_notes": [
+      "Identification aid only. Do not consume or use based on a model prediction."
+    ],
+    "sources": [],
+    "notice": "Medicinal details are not yet curated. No unsupported claims are shown."
+  },
+  "turmeric": {
+    "id": "turmeric",
+    "common_name": "Turmeric",
+    "scientific_name": "Curcuma longa",
+    "review_status": "pending",
+    "names": {
+      "tamil": null,
+      "sanskrit": null
+    },
+    "traditional_uses": [],
+    "constituents": [],
+    "safety_notes": [
+      "Identification aid only. Do not consume or use based on a model prediction."
+    ],
+    "sources": [],
+    "notice": "Medicinal details are not yet curated. No unsupported claims are shown."
+  },
+  "ashwagandha": {
+    "id": "ashwagandha",
+    "common_name": "Ashwagandha",
+    "scientific_name": "Withania somnifera",
+    "review_status": "pending",
+    "names": {
+      "tamil": null,
+      "sanskrit": null
+    },
+    "traditional_uses": [],
+    "constituents": [],
+    "safety_notes": [
+      "Identification aid only. Do not consume or use based on a model prediction."
+    ],
+    "sources": [],
+    "notice": "Medicinal details are not yet curated. No unsupported claims are shown."
+  },
+  "brahmi": {
+    "id": "brahmi",
+    "common_name": "Brahmi",
+    "scientific_name": "Bacopa monnieri",
+    "review_status": "pending",
+    "names": {
+      "tamil": null,
+      "sanskrit": null
+    },
+    "traditional_uses": [],
+    "constituents": [],
+    "safety_notes": [
+      "Identification aid only. Do not consume or use based on a model prediction."
+    ],
+    "sources": [],
+    "notice": "Medicinal details are not yet curated. No unsupported claims are shown."
+  },
+  "bael": {
+    "id": "bael",
+    "common_name": "Bael",
+    "scientific_name": "Aegle marmelos",
+    "review_status": "pending",
+    "names": {
+      "tamil": null,
+      "sanskrit": null
+    },
+    "traditional_uses": [],
+    "constituents": [],
+    "safety_notes": [
+      "Identification aid only. Do not consume or use based on a model prediction."
+    ],
+    "sources": [],
+    "notice": "Medicinal details are not yet curated. No unsupported claims are shown."
+  },
+  "peppermint": {
+    "id": "peppermint",
+    "common_name": "Peppermint",
+    "scientific_name": "Mentha × piperita",
+    "review_status": "pending",
+    "names": {
+      "tamil": null,
+      "sanskrit": null
+    },
+    "traditional_uses": [],
+    "constituents": [],
+    "safety_notes": [
+      "Identification aid only. Do not consume or use based on a model prediction."
+    ],
+    "sources": [],
+    "notice": "Medicinal details are not yet curated. No unsupported claims are shown."
+  },
+  "lemon_balm": {
+    "id": "lemon_balm",
+    "common_name": "Lemon Balm",
+    "scientific_name": "Melissa officinalis",
+    "review_status": "pending",
+    "names": {
+      "tamil": null,
+      "sanskrit": null
+    },
+    "traditional_uses": [],
+    "constituents": [],
+    "safety_notes": [
+      "Identification aid only. Do not consume or use based on a model prediction."
+    ],
+    "sources": [],
+    "notice": "Medicinal details are not yet curated. No unsupported claims are shown."
+  },
+  "stevia": {
+    "id": "stevia",
+    "common_name": "Stevia",
+    "scientific_name": "Stevia rebaudiana",
+    "review_status": "pending",
+    "names": {
+      "tamil": null,
+      "sanskrit": null
+    },
+    "traditional_uses": [],
+    "constituents": [],
+    "safety_notes": [
+      "Identification aid only. Do not consume or use based on a model prediction."
+    ],
+    "sources": [],
+    "notice": "Medicinal details are not yet curated. No unsupported claims are shown."
+  },
+  "catnip": {
+    "id": "catnip",
+    "common_name": "Catnip",
+    "scientific_name": "Nepeta cataria",
+    "review_status": "pending",
+    "names": {
+      "tamil": null,
+      "sanskrit": null
+    },
+    "traditional_uses": [],
+    "constituents": [],
+    "safety_notes": [
+      "Identification aid only. Do not consume or use based on a model prediction."
+    ],
+    "sources": [],
+    "notice": "Medicinal details are not yet curated. No unsupported claims are shown."
+  }
+}

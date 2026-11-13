@@ -1,0 +1,8 @@
+# Draft only. Do not deploy until trained artifact and account/free-plan checks pass.
+services:
+  - type: web
+    name: medicinal-plant-prototype
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/health
+    autoDeploy: false

@@ -1,0 +1,8 @@
+legacy-readonly
+.git
+web/node_modules
+data/candidates
+data/images
+**/__pycache__
+.pytest_cache
+artifacts/architecture-benchmark.onnx
