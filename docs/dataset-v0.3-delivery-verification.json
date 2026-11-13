@@ -1,0 +1,25 @@
+{
+  "release_url": "https://github.com/Aathi-27/convnext-medicinal-plant-prototype/releases/tag/dataset-v0.3-experimental",
+  "images_verified": 627,
+  "classes": {
+    "ashwagandha": 57,
+    "brahmi": 35,
+    "bael": 58,
+    "catnip": 97,
+    "neem": 49,
+    "peppermint": 62,
+    "lemon_balm": 63,
+    "tulsi": 71,
+    "turmeric": 57,
+    "stevia": 78
+  },
+  "splits": {
+    "test": 56,
+    "train": 421,
+    "val": 85,
+    "new_test": 65
+  },
+  "archive_hashes_verified": true,
+  "all_photo_bytes_match_manifest": true,
+  "attribution_and_licenses_in_all_parts": true
+}

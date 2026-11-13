@@ -1,0 +1,710 @@
+{
+  "architecture": "convnext_tiny",
+  "method": "Frozen-feature head initialization on expanded training set, then8epochs full fine-tuning batch2 with lower backbone learning rate; best development validation-loss checkpoint",
+  "checkpoint_epoch": 8,
+  "checkpoint_sha256": "a2434828f5be660eb9a05df6a835a698e01ece2b57ff8403ab4a782df6b6e624",
+  "manifest_sha256": "e892ceffb5f3775c92a09bb0d2b320fe6ca45cbcc090750081530d4af98bafed",
+  "experimental_only": true,
+  "deployment_ready": false,
+  "caveats": [
+    "Community labels, not expert-certified",
+    "Small internal contributor-grouped holdouts, not external phone benchmark",
+    "All old heldout sets excluded; development validation only",
+    "No report accuracy reproduction or calibrated reliability claim"
+  ],
+  "species_ids": [
+    "tulsi",
+    "neem",
+    "turmeric",
+    "ashwagandha",
+    "brahmi",
+    "bael",
+    "peppermint",
+    "lemon_balm",
+    "stevia",
+    "catnip"
+  ],
+  "results": {
+    "val": {
+      "n": 85,
+      "correct": 70,
+      "accuracy": 0.8235294117647058,
+      "confusion_matrix": [
+        [
+          10,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          2,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          9,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          9,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          7,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          0,
+          0,
+          6,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          6,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          9,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          5,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          7
+        ]
+      ],
+      "per_class": {
+        "tulsi": {
+          "correct": 10,
+          "total": 13
+        },
+        "neem": {
+          "correct": 2,
+          "total": 4
+        },
+        "turmeric": {
+          "correct": 9,
+          "total": 9
+        },
+        "ashwagandha": {
+          "correct": 9,
+          "total": 9
+        },
+        "brahmi": {
+          "correct": 7,
+          "total": 9
+        },
+        "bael": {
+          "correct": 6,
+          "total": 8
+        },
+        "peppermint": {
+          "correct": 6,
+          "total": 8
+        },
+        "lemon_balm": {
+          "correct": 9,
+          "total": 12
+        },
+        "stevia": {
+          "correct": 5,
+          "total": 6
+        },
+        "catnip": {
+          "correct": 7,
+          "total": 7
+        }
+      },
+      "predictions": [
+        {
+          "photo_id": "7caea86d8d3b66fffd3bc131a232f4467fc5baa7",
+          "actual": "tulsi",
+          "predicted": "stevia",
+          "score": 0.39727282524108887
+        },
+        {
+          "photo_id": "1104f5688bc6e17fcabebda21bb54e3a3023b652",
+          "actual": "tulsi",
+          "predicted": "tulsi",
+          "score": 0.8722209930419922
+        },
+        {
+          "photo_id": "2f01cd0dab5fdaf089908e91845a41e0fdca56a3",
+          "actual": "tulsi",
+          "predicted": "tulsi",
+          "score": 0.6123906373977661
+        },
+        {
+          "photo_id": "ef3788ff4b52ea7bfd0e3780628b26925cb8f910",
+          "actual": "tulsi",
+          "predicted": "tulsi",
+          "score": 0.5920069217681885
+        },
+        {
+          "photo_id": "bc4d590813c46c2fe6bda4530aedfbf4d35fcea6",
+          "actual": "tulsi",
+          "predicted": "tulsi",
+          "score": 0.37243184447288513
+        },
+        {
+          "photo_id": "5bc0d7e7db001f6aac067c567867b5e27ccb3f1a",
+          "actual": "tulsi",
+          "predicted": "tulsi",
+          "score": 0.9380909204483032
+        },
+        {
+          "photo_id": "961eee39540adec7ce72ee47e61b0e82cd0adb53",
+          "actual": "neem",
+          "predicted": "neem",
+          "score": 0.7012471556663513
+        },
+        {
+          "photo_id": "b2dccc93c23d85bcae332b083fdf6a00588d0908",
+          "actual": "neem",
+          "predicted": "bael",
+          "score": 0.5408726930618286
+        },
+        {
+          "photo_id": "166bf4db1e04a756fa49177e1f258adda86e064f",
+          "actual": "neem",
+          "predicted": "tulsi",
+          "score": 0.2906864583492279
+        },
+        {
+          "photo_id": "85a8809bfd5efbdf3539c4fbe10f48d5c596d62a",
+          "actual": "turmeric",
+          "predicted": "turmeric",
+          "score": 0.9987785220146179
+        },
+        {
+          "photo_id": "f5d4b68bf4f9d151ba5a20d60574e6080b404c68",
+          "actual": "turmeric",
+          "predicted": "turmeric",
+          "score": 0.9067813754081726
+        },
+        {
+          "photo_id": "019e0cee91e6d61f16b42385f20820884db718d0",
+          "actual": "turmeric",
+          "predicted": "turmeric",
+          "score": 0.9056200385093689
+        },
+        {
+          "photo_id": "ad03133bf6da4947085481a5fa77a85d53e82d81",
+          "actual": "turmeric",
+          "predicted": "turmeric",
+          "score": 0.9694064855575562
+        },
+        {
+          "photo_id": "b0be49a03f8fa2aad0a007cce8ac284e8c26b8ca",
+          "actual": "turmeric",
+          "predicted": "turmeric",
+          "score": 0.9997082352638245
+        },
+        {
+          "photo_id": "5e5b7c572b79e31c9061d44a9687f0aa52523513",
+          "actual": "turmeric",
+          "predicted": "turmeric",
+          "score": 0.9831368327140808
+        },
+        {
+          "photo_id": "ce3afa1b9475cd1d238b3afb57a37e630c324b77",
+          "actual": "ashwagandha",
+          "predicted": "ashwagandha",
+          "score": 0.9879835844039917
+        },
+        {
+          "photo_id": "0cd042c2a7b4be333eb7f495415535502d042fa6",
+          "actual": "ashwagandha",
+          "predicted": "ashwagandha",
+          "score": 0.9624390006065369
+        },
+        {
+          "photo_id": "a0c130abd3c6a2e1cc2e797c8f07491589fd73c2",
+          "actual": "ashwagandha",
+          "predicted": "ashwagandha",
+          "score": 0.9627741575241089
+        },
+        {
+          "photo_id": "32b2f59cae24402cf6ce4542aad3c249ac383bd4",
+          "actual": "ashwagandha",
+          "predicted": "ashwagandha",
+          "score": 0.5253867506980896
+        },
+        {
+          "photo_id": "56d79a1ac498da7f7d53e96741208baf15861b01",
+          "actual": "ashwagandha",
+          "predicted": "ashwagandha",
+          "score": 0.9981781244277954
+        },
+        {
+          "photo_id": "9d10956302d67ad39ecdbab4aa33729347a51fcc",
+          "actual": "brahmi",
+          "predicted": "brahmi",
+          "score": 0.8987260460853577
+        },
+        {
+          "photo_id": "81189dcb0e51c802ca74e0b05ca7d2332990350e",
+          "actual": "brahmi",
+          "predicted": "brahmi",
+          "score": 0.7594295740127563
+        },
+        {
+          "photo_id": "aaaf46f8dfc4d78770aac84031ee76b54253871c",
+          "actual": "brahmi",
+          "predicted": "brahmi",
+          "score": 0.985069990158081
+        },
+        {
+          "photo_id": "3ce9190e974b5e17fc7940833d7fc0d3c6632670",
+          "actual": "brahmi",
+          "predicted": "stevia",
+          "score": 0.6170932054519653
+        },
+        {
+          "photo_id": "2ce601e71b3fd760a150fdf4da090edf861ded3b",
+          "actual": "brahmi",
+          "predicted": "stevia",
+          "score": 0.4612918496131897
+        },
+        {
+          "photo_id": "d2f0e6c54c2b5340d296dc1b9fa3f81c32cb6ec5",
+          "actual": "bael",
+          "predicted": "neem",
+          "score": 0.45642632246017456
+        },
+        {
+          "photo_id": "692707316c635ac05668ebb5e082352452e5a342",
+          "actual": "bael",
+          "predicted": "bael",
+          "score": 0.9875915050506592
+        },
+        {
+          "photo_id": "04337fa4449ddf7f22e5fba242b499279fea7ba2",
+          "actual": "bael",
+          "predicted": "turmeric",
+          "score": 0.33842530846595764
+        },
+        {
+          "photo_id": "b4b0e554d1989c7d5e9a224f5657e7995ca96b71",
+          "actual": "bael",
+          "predicted": "bael",
+          "score": 0.8303977251052856
+        },
+        {
+          "photo_id": "5a6269357de22a62b94e50f52f404514cde6c48b",
+          "actual": "peppermint",
+          "predicted": "peppermint",
+          "score": 0.7662336230278015
+        },
+        {
+          "photo_id": "e449625f488123c0f387f9a19169243a01352a6f",
+          "actual": "peppermint",
+          "predicted": "peppermint",
+          "score": 0.834140419960022
+        },
+        {
+          "photo_id": "70cea97e25efee66e7280bf12c5089221c81558f",
+          "actual": "peppermint",
+          "predicted": "peppermint",
+          "score": 0.5737821459770203
+        },
+        {
+          "photo_id": "8201366d88e0f0bcb8b999124944ad5e950d9feb",
+          "actual": "peppermint",
+          "predicted": "peppermint",
+          "score": 0.4234158992767334
+        },
+        {
+          "photo_id": "d7cb2e40656a0e22430d2dcb0a7dffecd2e8f0e3",
+          "actual": "peppermint",
+          "predicted": "lemon_balm",
+          "score": 0.5046116709709167
+        },
+        {
+          "photo_id": "8fbef7410ee80f29c7e142ca8190fe927bd40072",
+          "actual": "peppermint",
+          "predicted": "peppermint",
+          "score": 0.605120062828064
+        },
+        {
+          "photo_id": "bfb64c2f87ea78b49a2b929cff8d39c73c716da5",
+          "actual": "lemon_balm",
+          "predicted": "lemon_balm",
+          "score": 0.7659664750099182
+        },
+        {
+          "photo_id": "8df66d9dc8e87e75a5a3d0b320e58a031dd7c086",
+          "actual": "lemon_balm",
+          "predicted": "lemon_balm",
+          "score": 0.700998842716217
+        },
+        {
+          "photo_id": "f03854cbfdc7351c19ec275367e080fa809d4f83",
+          "actual": "lemon_balm",
+          "predicted": "peppermint",
+          "score": 0.39493054151535034
+        },
+        {
+          "photo_id": "f0235b159662d039e45a28c61e4dd52f6bf74207",
+          "actual": "lemon_balm",
+          "predicted": "lemon_balm",
+          "score": 0.816265344619751
+        },
+        {
+          "photo_id": "d95b1f33b50bfb1ac12194e6f1de8bbdb4bff755",
+          "actual": "lemon_balm",
+          "predicted": "lemon_balm",
+          "score": 0.947598934173584
+        },
+        {
+          "photo_id": "4d7b93d946bd48839e9436a97c77c3f48ef2e853",
+          "actual": "stevia",
+          "predicted": "stevia",
+          "score": 0.7203536033630371
+        },
+        {
+          "photo_id": "00bd544cdf19ee8b495877f1943ab1f90948f68c",
+          "actual": "stevia",
+          "predicted": "bael",
+          "score": 0.490268349647522
+        },
+        {
+          "photo_id": "4c99be4b2d8d846474105f7645299a221a625fe9",
+          "actual": "stevia",
+          "predicted": "stevia",
+          "score": 0.379307359457016
+        },
+        {
+          "photo_id": "ceece5eeff4683c41ad5d72e48f4b99826848f87",
+          "actual": "catnip",
+          "predicted": "catnip",
+          "score": 0.8183554410934448
+        },
+        {
+          "photo_id": "0e6ff22286b7a91998c686f97a48fed71bf34191",
+          "actual": "catnip",
+          "predicted": "catnip",
+          "score": 0.3451523184776306
+        },
+        {
+          "photo_id": "6a01a0a8934f3347d5a6eb711a6bd938734539a9",
+          "actual": "catnip",
+          "predicted": "catnip",
+          "score": 0.6481662392616272
+        },
+        {
+          "photo_id": "8e423aa97661a9574e7f867daec7d1522a329780",
+          "actual": "catnip",
+          "predicted": "catnip",
+          "score": 0.9596552848815918
+        },
+        {
+          "photo_id": "64cc0e8ae1340ef00aede6c35643342e5daaada4",
+          "actual": "catnip",
+          "predicted": "catnip",
+          "score": 0.8759319186210632
+        },
+        {
+          "photo_id": "66ec6b7dc84b3dd1ec887cf2d8534829dc207ac1",
+          "actual": "tulsi",
+          "predicted": "bael",
+          "score": 0.4241095185279846
+        },
+        {
+          "photo_id": "3b0bc6e8b3a21feae5e6a47e848e473bd897ae0f",
+          "actual": "tulsi",
+          "predicted": "tulsi",
+          "score": 0.9133496880531311
+        },
+        {
+          "photo_id": "ade6b0f97b6d8f66c434220f2b50258f3fa8ab46",
+          "actual": "tulsi",
+          "predicted": "tulsi",
+          "score": 0.3216795325279236
+        },
+        {
+          "photo_id": "41daf520fa6a878d72d70de0bd56671e438eda1b",
+          "actual": "tulsi",
+          "predicted": "tulsi",
+          "score": 0.9959332346916199
+        },
+        {
+          "photo_id": "e0dab7685ca97da3a0888a8edee12a6e12459272",
+          "actual": "tulsi",
+          "predicted": "brahmi",
+          "score": 0.4747973680496216
+        },
+        {
+          "photo_id": "04f593bcab39a0bcd0b6d905f4c3f83bdeec01a6",
+          "actual": "tulsi",
+          "predicted": "tulsi",
+          "score": 0.5582870841026306
+        },
+        {
+          "photo_id": "5562fdb8b5616802ea957d0105dd87cbc694d4e7",
+          "actual": "tulsi",
+          "predicted": "tulsi",
+          "score": 0.35320767760276794
+        },
+        {
+          "photo_id": "20d29cf380f568f9c58e2256d0e2d4c088ed8518",
+          "actual": "neem",
+          "predicted": "neem",
+          "score": 0.7576403021812439
+        },
+        {
+          "photo_id": "c757b94b8b3176a359f1eeafc4e25ae21a1faee7",
+          "actual": "turmeric",
+          "predicted": "turmeric",
+          "score": 0.9969424605369568
+        },
+        {
+          "photo_id": "f923dc837696afeede002968aa6793e75cc08773",
+          "actual": "turmeric",
+          "predicted": "turmeric",
+          "score": 0.9739187955856323
+        },
+        {
+          "photo_id": "da0568c5f68cf94dbb01fc9c81b666fc36304c9c",
+          "actual": "turmeric",
+          "predicted": "turmeric",
+          "score": 0.9993763566017151
+        },
+        {
+          "photo_id": "2cc927a99efcaaf29581fb356e5e801b8531eeaa",
+          "actual": "ashwagandha",
+          "predicted": "ashwagandha",
+          "score": 0.9943513870239258
+        },
+        {
+          "photo_id": "83418a62c2c65819eb94f025558a562492e520ab",
+          "actual": "ashwagandha",
+          "predicted": "ashwagandha",
+          "score": 0.6356315612792969
+        },
+        {
+          "photo_id": "c9493b70e67bb3c434d4b5482e5e87e63d0cbcd2",
+          "actual": "ashwagandha",
+          "predicted": "ashwagandha",
+          "score": 0.9789801836013794
+        },
+        {
+          "photo_id": "03d90b70eb83642f7a03611e9d9197914a73a931",
+          "actual": "ashwagandha",
+          "predicted": "ashwagandha",
+          "score": 0.8649430871009827
+        },
+        {
+          "photo_id": "5ca4ab56c813fa7c2106e692053f6065243f4a38",
+          "actual": "bael",
+          "predicted": "bael",
+          "score": 0.9894458651542664
+        },
+        {
+          "photo_id": "cc47a024eae6fd73fc8668adb4b94245467c366c",
+          "actual": "bael",
+          "predicted": "bael",
+          "score": 0.9083333015441895
+        },
+        {
+          "photo_id": "80a7a5443d5046c0566b42f464265551094d1590",
+          "actual": "bael",
+          "predicted": "bael",
+          "score": 0.4668042063713074
+        },
+        {
+          "photo_id": "d0e8c13c1b053214d10df6eba4eddfd4b7a48742",
+          "actual": "bael",
+          "predicted": "bael",
+          "score": 0.6969629526138306
+        },
+        {
+          "photo_id": "a110e4c5072c57f9250984e51393a23e03d2aa26",
+          "actual": "peppermint",
+          "predicted": "peppermint",
+          "score": 0.8298653960227966
+        },
+        {
+          "photo_id": "e062dae16f8ffab4c54546d097485319e43ec41d",
+          "actual": "peppermint",
+          "predicted": "stevia",
+          "score": 0.704841673374176
+        },
+        {
+          "photo_id": "0e278ce1972842828b731659579ea24a2284c933",
+          "actual": "lemon_balm",
+          "predicted": "lemon_balm",
+          "score": 0.9157621264457703
+        },
+        {
+          "photo_id": "690883dd4eb92331abac9db78cf987d229b3d1a1",
+          "actual": "lemon_balm",
+          "predicted": "lemon_balm",
+          "score": 0.7399967908859253
+        },
+        {
+          "photo_id": "93498c153cc62c00f8ee436c8c23a77839e7e2d8",
+          "actual": "lemon_balm",
+          "predicted": "lemon_balm",
+          "score": 0.48861411213874817
+        },
+        {
+          "photo_id": "e8dd0ac4a91948cd2fa5e26d4f7b4c069af75d9b",
+          "actual": "lemon_balm",
+          "predicted": "lemon_balm",
+          "score": 0.5590205192565918
+        },
+        {
+          "photo_id": "706a74408d4a51183973095cf724bde0876fec81",
+          "actual": "lemon_balm",
+          "predicted": "lemon_balm",
+          "score": 0.8183966875076294
+        },
+        {
+          "photo_id": "c6a10c1669cf8d36483b79bcbf026ddab514317a",
+          "actual": "lemon_balm",
+          "predicted": "catnip",
+          "score": 0.5518223643302917
+        },
+        {
+          "photo_id": "1a102d590fe663a95ecd95d7db071b6a37e2295a",
+          "actual": "lemon_balm",
+          "predicted": "stevia",
+          "score": 0.42791369557380676
+        },
+        {
+          "photo_id": "cf4f054c0e7f462f2f6b491c5d8c163f64401680",
+          "actual": "stevia",
+          "predicted": "stevia",
+          "score": 0.9300848245620728
+        },
+        {
+          "photo_id": "82a867e18bfd9682d077d1a56e048b6c257e2dbf",
+          "actual": "stevia",
+          "predicted": "stevia",
+          "score": 0.3853382170200348
+        },
+        {
+          "photo_id": "90e99e110f80934a975a18531b3ca798daa046fe",
+          "actual": "stevia",
+          "predicted": "stevia",
+          "score": 0.6367412209510803
+        },
+        {
+          "photo_id": "910c436ef96d257be61e9fef76fcac27736d6e94",
+          "actual": "catnip",
+          "predicted": "catnip",
+          "score": 0.6998199224472046
+        },
+        {
+          "photo_id": "d0522398c4a6fc3b7458a2f924936a5d3e8cbf93",
+          "actual": "catnip",
+          "predicted": "catnip",
+          "score": 0.6615436673164368
+        },
+        {
+          "photo_id": "761023815",
+          "actual": "brahmi",
+          "predicted": "brahmi",
+          "score": 0.8668570518493652
+        },
+        {
+          "photo_id": "759859338",
+          "actual": "brahmi",
+          "predicted": "brahmi",
+          "score": 0.488511323928833
+        },
+        {
+          "photo_id": "756909727",
+          "actual": "brahmi",
+          "predicted": "brahmi",
+          "score": 0.9996525049209595
+        },
+        {
+          "photo_id": "743469216",
+          "actual": "brahmi",
+          "predicted": "brahmi",
+          "score": 0.9131523370742798
+        }
+      ]
+    }
+  }
+}
