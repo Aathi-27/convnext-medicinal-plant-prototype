@@ -1,7 +1,9 @@
 # Hosting, development status
 AWS is out of scope for this prototype. Free one-day deployment is the target.
 Preferred trial: Render Free, ONNX inference only, single worker and serialized image
-preprocessing/inference. Server image limit 10 MB and 10 megapixels. No uploaded
+preprocessing/inference. The browser transparently downscales larger
+phone photos before upload; the server keeps its 10 MB and 10 megapixel limits,
+so direct API clients still need bounded images. No uploaded
 image is persisted. This is not a production medical service.
 
 Local UNTRAINED architecture-only benchmark: ONNX 106.0 MiB; model process peak
