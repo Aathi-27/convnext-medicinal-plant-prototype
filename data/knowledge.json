@@ -3,35 +3,58 @@
     "id": "tulsi",
     "common_name": "Tulsi",
     "scientific_name": "Ocimum tenuiflorum",
-    "review_status": "pending",
+    "review_status": "source_checked_partial",
     "names": {
       "tamil": null,
       "sanskrit": null
     },
-    "traditional_uses": [],
-    "constituents": [],
-    "safety_notes": [
-      "Identification aid only. Do not consume or use based on a model prediction."
+    "traditional_uses": [
+      "Used in Ayurveda. Small human studies of prepared extracts have studied stress and sleep, but further research is needed."
     ],
-    "sources": [],
-    "notice": "Medicinal details are not yet curated. No unsupported claims are shown."
+    "constituents": [
+      "Eugenol",
+      "Ursolic acid",
+      "Rosmarinic acid"
+    ],
+    "safety_notes": [
+      "Identification aid only. Do not consume or use based on a model prediction.",
+      "Reported adverse effects include nausea, headache and agitation."
+    ],
+    "sources": [
+      {
+        "title": "Memorial Sloan Kettering: Holy Basil",
+        "url": "https://www.mskcc.org/cancer-care/integrative-medicine/herbs/holy-basil-01"
+      }
+    ],
+    "notice": "Small studies do not establish treatment efficacy. Leaf identification cannot establish an extract's composition.",
+    "reviewed_on": "2026-11-13"
   },
   "neem": {
     "id": "neem",
     "common_name": "Neem",
     "scientific_name": "Azadirachta indica",
-    "review_status": "pending",
+    "review_status": "source_checked_partial",
     "names": {
       "tamil": null,
       "sanskrit": null
     },
-    "traditional_uses": [],
+    "traditional_uses": [
+      "Neem has a history of traditional medicinal use. This does not establish clinical benefit or safe consumption."
+    ],
     "constituents": [],
     "safety_notes": [
-      "Identification aid only. Do not consume or use based on a model prediction."
+      "Identification aid only. Do not consume or use based on a model prediction.",
+      "Do not ingest neem oil. Serious poisoning has been reported, particularly in children.",
+      "Long-term leaf consumption may carry risks; do not self-treat using a photo identification."
     ],
-    "sources": [],
-    "notice": "Medicinal details are not yet curated. No unsupported claims are shown."
+    "sources": [
+      {
+        "title": "National Research Council: Neem, Medicinals (1992)",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK234637/"
+      }
+    ],
+    "notice": "Evidence and safety depend on the plant part and preparation. This historical reference is not clinical proof.",
+    "reviewed_on": "2026-11-13"
   },
   "turmeric": {
     "id": "turmeric",
@@ -95,35 +118,56 @@
     "id": "brahmi",
     "common_name": "Brahmi",
     "scientific_name": "Bacopa monnieri",
-    "review_status": "pending",
+    "review_status": "source_checked_partial",
     "names": {
-      "tamil": null,
-      "sanskrit": null
+      "tamil": "Brahmi vazhukkai",
+      "sanskrit": "Brahmi"
     },
-    "traditional_uses": [],
-    "constituents": [],
-    "safety_notes": [
-      "Identification aid only. Do not consume or use based on a model prediction."
+    "traditional_uses": [
+      "Bacopa has a history of use in Ayurveda for memory. Some small studies of standardized extracts have studied cognition."
     ],
-    "sources": [],
-    "notice": "Medicinal details are not yet curated. No unsupported claims are shown."
+    "constituents": [
+      "Bacosides"
+    ],
+    "safety_notes": [
+      "Identification aid only. Do not consume or use based on a model prediction.",
+      "The name Brahmi can also refer to Centella asiatica. This prototype targets Bacopa monnieri only.",
+      "Consult a clinician before using supplements; a model prediction cannot establish safety."
+    ],
+    "sources": [
+      {
+        "title": "American Botanical Council: Bacopa",
+        "url": "https://www.herbalgram.org/resources/herbalgram/issues/91/table-of-contents/herbalgram-91-herb-profile-bacopa/"
+      }
+    ],
+    "notice": "Research on standardized extracts cannot be transferred to an unidentified leaf or home preparation. This is not a treatment claim.",
+    "reviewed_on": "2026-11-13"
   },
   "bael": {
     "id": "bael",
     "common_name": "Bael",
     "scientific_name": "Aegle marmelos",
-    "review_status": "pending",
+    "review_status": "source_checked_partial",
     "names": {
       "tamil": null,
       "sanskrit": null
     },
-    "traditional_uses": [],
+    "traditional_uses": [
+      "Bael has traditional medicinal uses described in reviews. Most reported effects concern laboratory, animal or preparation-specific research."
+    ],
     "constituents": [],
     "safety_notes": [
-      "Identification aid only. Do not consume or use based on a model prediction."
+      "Identification aid only. Do not consume or use based on a model prediction.",
+      "Do not use a leaf prediction to choose a medicinal preparation or dose. Human safety evidence remains limited."
     ],
-    "sources": [],
-    "notice": "Medicinal details are not yet curated. No unsupported claims are shown."
+    "sources": [
+      {
+        "title": "Asian Pacific Journal of Tropical Disease: Aegle marmelos overview (2014)",
+        "url": "https://ncbi.nlm.nih.gov/pmc/articles/PMC4027346/"
+      }
+    ],
+    "notice": "Laboratory and animal findings do not establish clinical benefit or safe dosing in humans.",
+    "reviewed_on": "2026-11-13"
   },
   "peppermint": {
     "id": "peppermint",
@@ -158,51 +202,82 @@
     "id": "lemon_balm",
     "common_name": "Lemon Balm",
     "scientific_name": "Melissa officinalis",
-    "review_status": "pending",
+    "review_status": "source_checked_partial",
     "names": {
       "tamil": null,
       "sanskrit": null
     },
-    "traditional_uses": [],
+    "traditional_uses": [
+      "The EMA recognizes traditional use of prepared melissa leaf medicines for mild stress, sleep and mild digestive symptoms."
+    ],
     "constituents": [],
     "safety_notes": [
-      "Identification aid only. Do not consume or use based on a model prediction."
+      "Identification aid only. Do not consume or use based on a model prediction.",
+      "The EMA summary concerns specific leaf preparations, not any freshly identified plant.",
+      "Discuss supplements with a clinician, especially for children, pregnancy, breastfeeding or when taking medicines."
     ],
-    "sources": [],
-    "notice": "Medicinal details are not yet curated. No unsupported claims are shown."
+    "sources": [
+      {
+        "title": "European Medicines Agency: Melissa leaf",
+        "url": "https://www.ema.europa.eu/en/medicines/herbal/melissae-folium"
+      }
+    ],
+    "notice": "EMA conclusions are based on long-standing traditional use, not sufficient clinical-trial evidence. This is educational information, not instructions for use.",
+    "reviewed_on": "2026-11-13"
   },
   "stevia": {
     "id": "stevia",
     "common_name": "Stevia",
     "scientific_name": "Stevia rebaudiana",
-    "review_status": "pending",
+    "review_status": "source_checked_partial",
     "names": {
       "tamil": null,
       "sanskrit": null
     },
-    "traditional_uses": [],
-    "constituents": [],
-    "safety_notes": [
-      "Identification aid only. Do not consume or use based on a model prediction."
+    "traditional_uses": [
+      "Stevia-derived high-purity steviol glycosides are used as sweeteners. Sweetener use is not evidence of medicinal benefit."
     ],
-    "sources": [],
-    "notice": "Medicinal details are not yet curated. No unsupported claims are shown."
+    "constituents": [
+      "Steviol glycosides"
+    ],
+    "safety_notes": [
+      "Identification aid only. Do not consume or use based on a model prediction.",
+      "The US FDA distinguishes high-purity glycosides from whole leaves and crude extracts, which are not permitted as conventional-food sweeteners in the US. This is a US regulatory distinction, not an Indian approval statement."
+    ],
+    "sources": [
+      {
+        "title": "US FDA: Aspartame and Other Sweeteners in Food",
+        "url": "https://www.fda.gov/food/food-additives-petitions/aspartame-and-other-sweeteners-food"
+      }
+    ],
+    "notice": "Purified sweeteners and whole leaves are different products. No diabetes-treatment claim is made.",
+    "reviewed_on": "2026-11-13"
   },
   "catnip": {
     "id": "catnip",
     "common_name": "Catnip",
     "scientific_name": "Nepeta cataria",
-    "review_status": "pending",
+    "review_status": "source_checked_partial",
     "names": {
       "tamil": null,
       "sanskrit": null
     },
-    "traditional_uses": [],
+    "traditional_uses": [
+      "Catnip has traditional uses, but human clinical evidence for medicinal use is limited."
+    ],
     "constituents": [],
     "safety_notes": [
-      "Identification aid only. Do not consume or use based on a model prediction."
+      "Identification aid only. Do not consume or use based on a model prediction.",
+      "Avoid medicinal use during pregnancy or breastfeeding.",
+      "Excessive ingestion may cause headache, malaise or vomiting. A model prediction cannot establish safety."
     ],
-    "sources": [],
-    "notice": "Medicinal details are not yet curated. No unsupported claims are shown."
+    "sources": [
+      {
+        "title": "Drugs.com: Catnip clinical overview",
+        "url": "https://www.drugs.com/npp/catnip.html"
+      }
+    ],
+    "notice": "Limited human data do not establish medicinal benefit or dosing. Insect-repellent research on preparations does not validate consuming leaves.",
+    "reviewed_on": "2026-11-13"
   }
 }

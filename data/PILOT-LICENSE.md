@@ -7,3 +7,6 @@ Retain the supplied author/source/license attribution and ShareAlike conditions 
 License: https://creativecommons.org/licenses/by-sa/4.0/
 
 Review status means only provisional visual suitability for a small internal experiment. Labels are community labels, not expert botanical identification. Do not use these records as a medical, botanical safety or performance certification.
+
+
+The expanded manifest additionally includes separately attributed CC0 and CC-BY4.0 iNaturalist Bacopa photos. Per-photo licenseUrl is authoritative. CC-BY-SA4.0 images/derivatives retain ShareAlike; do not relicense media under the code license. Weights remain private experimental artifacts, not represented as unrestricted releases.

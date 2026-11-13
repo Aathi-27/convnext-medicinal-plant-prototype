@@ -15,3 +15,6 @@ artifacts/*
 *.zip
 
 data/pilot-images/
+
+data/experimental-images/
+experimental-run/

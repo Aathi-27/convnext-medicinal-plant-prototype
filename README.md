@@ -56,3 +56,37 @@ security/load tests; deployment/account verification.
 A small frozen-feature ConvNeXt-Tiny baseline was trained to exercise the pipeline, not to reproduce report accuracy. See `docs/pilot-evaluation.json` for exact small-sample results and limits. It is not installed in the live service. The manifest uses community labels and provisional visual content screening, not expert botanical verification.
 
 To reproduce from the repository root: install training dependencies; `python scripts/fetch_pilot_images.py`; then `python training/pilot_frozen_features.py --manifest data/pilot-manifest.json --out artifacts/pilot`. Images keep their individual CC BY-SA4.0 terms and attribution. No checkpoint is published. Full fine-tuning, more data and external validation remain pending.
+
+
+## Expanded full-fine-tuning experiment (not deployed)
+532 visually screened community-labeled originals, not expert-certified. Contributor-grouped splits: 326 train,85 validation,65 new internal test,56 previously used pilot test. Full pretrained ConvNeXt-Tiny,10 epochs, batch1, best validation-loss checkpoint epoch9. New internal test53/65; Tulsi0/3, Bael2/4 and Catnip2/4 expose serious limitations. This is not an external phone benchmark or report-accuracy reproduction. See docs/finetune-evaluation.json and docs/finetune-history.json. The old56-image test is not untouched. No checkpoint is installed in production.
+
+Reproduce: `python scripts/fetch_experimental_images.py`, then `python training/finetune_experiment.py --manifest data/expanded-manifest.json --out experimental-run --epochs-this-run 1`. Repeat bounded runs for10epochs, then evaluate once with `python training/evaluate_experiment.py --manifest data/expanded-manifest.json --checkpoint-dir experimental-run`. Holdouts must not drive tuning.
+
+All ten knowledge records now offer partial source-linked educational notes through the Plant library independently of predictions. Traditional uses are not clinical endorsements. No dosing instructions. Names not verified remain blank.
+
+
+## Work log, problems and current limits
+This log describes work actually performed, not a claim of project completion.
+
+1. **Scope and architecture.** Matched the Phase I report's exact ten species. The older repository used a different model and lacked classes, so it was left untouched and a separate public repository was created. The architecture here is torchvision ConvNeXt-Tiny.
+2. **Interface and API.** Built the approved green/ivory desktop/phone interface, upload/camera file selection, safe image decoding, status/error handling and knowledge endpoints. Inspected real desktop/phone renders, including the later knowledge library. Ten core/API tests and the TypeScript/Vite build pass locally.
+3. **Free preview.** Deployed on an existing-account Render Free service in Singapore, not AWS. No paid compute or upgrade used. Tested public health/species endpoints and browser upload/Analyze/error flow. Free instances can sleep; the UI explains delays. Live model_ready=false until a defensible model release. Existing unrelated services were not changed.
+4. **Missing original dataset.** The original report dataset was unavailable. Investigated open sources rather than treating old augmented images as clean originals. GBIF Stevia results were dominated by herbarium sheets, unsuitable as phone-photo test data. Pl@ntNet exact-species galleries supplied richer candidate pools; iNaturalist supplemented Bacopa. Candidate totals were never counted as reviewed training originals.
+5. **Rights and review.** Retained per-photo authors, observation IDs, source URLs, licenses and SHA256 hashes. Visually excluded distant, flower-only or ambiguous photos. Initial346 candidates yielded258 provisional leaf-suitable photos. Expanded screening produced532 originals in the internal experiment. Screening is leaf-content review, not botanical expert certification. Images are not committed. Exact/dHash duplicate checks and contributor grouping reduce leakage but do not prove its absence.
+6. **Pilot.** Trained a linear head on frozen genuine pretrained ConvNeXt features. The258-photo pilot had44/56 correct on a tiny internal test. This was not full fine-tuning or report-accuracy reproduction and was never installed as the public classifier.
+7. **Full fine-tuning and memory failure.** Full ConvNeXt-Tiny training initially exceeded available memory at batch8 and was stopped. Batch1 completed10epochs locally. The best validation-loss checkpoint was epoch9. New65-image internal holdout:53correct. Tulsi0/3, Bael2/4, Catnip2/4 show serious failures despite the aggregate score. Old56-image test is already used and is not a fresh benchmark. Checkpoints remain private experimental artifacts. No external expert-labeled phone benchmark or calibrated confidence threshold exists yet.
+8. **Knowledge safety.** Added partial source checks for all ten records with citations, traditional-use/evidence distinctions, plant-part/preparation caveats and safety notes. No dosing instructions or treatment promises. Brahmi naming ambiguity is explicit; unverified regional names remain blank. Added a browsable library so knowledge does not depend on a model prediction.
+9. **Publishing route.** Browser root ZIP upload failed with HTTP400. A repository-scoped checksum-verified source-import workflow provided a working transfer route without new credentials. Replace this temporary source bundle with ordinary CI after source updates settle. Source import success is not the same as Render deployment success; each is checked separately.
+
+### Release checklist still open
+- Review weak-class labels and expand diverse original photos.
+- Establish a new external phone-photo benchmark, not another tuned internal split.
+- Re-train only after data changes are frozen; report class-level failures.
+- Export ONNX, verify PyTorch/runtime parity and measure inference memory on the free-tier budget.
+- Set and validate rejection/uncertainty behavior; closed-set softmax is not open-world identification.
+- Verify model/media licensing before distributing weights.
+- Deploy a justified checkpoint and test the full photo-to-result-to-knowledge flow.
+- Complete regional-name/source review and optional crop controls. Automatic segmentation is not implemented.
+
+The README is a running record and will be reconciled with the final live state. No93.2% accuracy,500-800images/class or2.5-hour training claim is reproduced here.

@@ -1,0 +1,70 @@
+{
+  "scope": "Expanded internal community-labeled research dataset, not an external expert-labeled benchmark",
+  "count": 532,
+  "old_internal_test_already_read": true,
+  "new_test_not_yet_predicted": true,
+  "group_seed": 102,
+  "near_duplicate_pairs": [],
+  "counts": {
+    "tulsi": {
+      "train": 27,
+      "val": 13,
+      "test": 3,
+      "new_test": 3
+    },
+    "neem": {
+      "train": 25,
+      "val": 4,
+      "test": 12,
+      "new_test": 8
+    },
+    "turmeric": {
+      "train": 35,
+      "val": 9,
+      "test": 6,
+      "new_test": 7
+    },
+    "ashwagandha": {
+      "train": 38,
+      "val": 9,
+      "test": 4,
+      "new_test": 6
+    },
+    "brahmi": {
+      "train": 16,
+      "val": 9,
+      "test": 2,
+      "new_test": 8
+    },
+    "bael": {
+      "train": 31,
+      "val": 8,
+      "test": 4,
+      "new_test": 4
+    },
+    "peppermint": {
+      "train": 33,
+      "val": 8,
+      "test": 8,
+      "new_test": 13
+    },
+    "lemon_balm": {
+      "train": 42,
+      "val": 12,
+      "test": 6,
+      "new_test": 3
+    },
+    "stevia": {
+      "train": 39,
+      "val": 6,
+      "test": 5,
+      "new_test": 9
+    },
+    "catnip": {
+      "train": 40,
+      "val": 7,
+      "test": 6,
+      "new_test": 4
+    }
+  }
+}
