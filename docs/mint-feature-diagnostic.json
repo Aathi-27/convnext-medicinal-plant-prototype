@@ -1,0 +1,123 @@
+{
+  "method": "Fresh ImageNet frozen ConvNeXtTiny features, trained linear10classhead, best mean old/new development-validation loss",
+  "results": {
+    "train": {
+      "n": 471,
+      "correct": 463,
+      "per_class": {
+        "tulsi": {
+          "n": 52,
+          "correct": 52
+        },
+        "neem": {
+          "n": 25,
+          "correct": 25
+        },
+        "turmeric": {
+          "n": 35,
+          "correct": 35
+        },
+        "ashwagandha": {
+          "n": 38,
+          "correct": 38
+        },
+        "brahmi": {
+          "n": 16,
+          "correct": 16
+        },
+        "bael": {
+          "n": 42,
+          "correct": 41
+        },
+        "peppermint": {
+          "n": 48,
+          "correct": 47
+        },
+        "lemon_balm": {
+          "n": 61,
+          "correct": 58
+        },
+        "stevia": {
+          "n": 58,
+          "correct": 58
+        },
+        "catnip": {
+          "n": 96,
+          "correct": 93
+        }
+      }
+    },
+    "val": {
+      "n": 85,
+      "correct": 70,
+      "per_class": {
+        "tulsi": {
+          "n": 13,
+          "correct": 12
+        },
+        "neem": {
+          "n": 4,
+          "correct": 3
+        },
+        "turmeric": {
+          "n": 9,
+          "correct": 9
+        },
+        "ashwagandha": {
+          "n": 9,
+          "correct": 8
+        },
+        "brahmi": {
+          "n": 9,
+          "correct": 6
+        },
+        "bael": {
+          "n": 8,
+          "correct": 6
+        },
+        "peppermint": {
+          "n": 8,
+          "correct": 7
+        },
+        "lemon_balm": {
+          "n": 12,
+          "correct": 9
+        },
+        "stevia": {
+          "n": 6,
+          "correct": 3
+        },
+        "catnip": {
+          "n": 7,
+          "correct": 7
+        }
+      }
+    },
+    "mint_dev_val": {
+      "n": 13,
+      "correct": 8,
+      "per_class": {
+        "peppermint": {
+          "n": 4,
+          "correct": 2
+        },
+        "lemon_balm": {
+          "n": 4,
+          "correct": 1
+        },
+        "catnip": {
+          "n": 5,
+          "correct": 5
+        }
+      }
+    }
+  },
+  "epochs": 50,
+  "deployment_ready": false,
+  "caveats": [
+    "Development tuning only, not test accuracy",
+    "13-photo mint validation is too small and now reused",
+    "No old test/new_test or99audit rows extracted",
+    "Community labels not expert certified"
+  ]
+}

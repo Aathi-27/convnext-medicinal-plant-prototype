@@ -1,0 +1,174 @@
+{
+  "finetune-v3": {
+    "epoch": 8,
+    "correct": 4,
+    "n": 13,
+    "per_class": {
+      "peppermint": {
+        "correct": 0,
+        "n": 4
+      },
+      "lemon_balm": {
+        "correct": 0,
+        "n": 4
+      },
+      "catnip": {
+        "correct": 4,
+        "n": 5
+      }
+    },
+    "predictions": [
+      {
+        "id": "316538586",
+        "actual": "peppermint",
+        "predicted": "tulsi"
+      },
+      {
+        "id": "229999237",
+        "actual": "peppermint",
+        "predicted": "brahmi"
+      },
+      {
+        "id": "156427431",
+        "actual": "peppermint",
+        "predicted": "catnip"
+      },
+      {
+        "id": "124276899",
+        "actual": "peppermint",
+        "predicted": "brahmi"
+      },
+      {
+        "id": "721932817",
+        "actual": "lemon_balm",
+        "predicted": "catnip"
+      },
+      {
+        "id": "709072868",
+        "actual": "lemon_balm",
+        "predicted": "catnip"
+      },
+      {
+        "id": "707127025",
+        "actual": "lemon_balm",
+        "predicted": "catnip"
+      },
+      {
+        "id": "701202557",
+        "actual": "lemon_balm",
+        "predicted": "catnip"
+      },
+      {
+        "id": "716720070",
+        "actual": "catnip",
+        "predicted": "catnip"
+      },
+      {
+        "id": "709918732",
+        "actual": "catnip",
+        "predicted": "catnip"
+      },
+      {
+        "id": "708704627",
+        "actual": "catnip",
+        "predicted": "brahmi"
+      },
+      {
+        "id": "705855073",
+        "actual": "catnip",
+        "predicted": "catnip"
+      },
+      {
+        "id": "703611392",
+        "actual": "catnip",
+        "predicted": "catnip"
+      }
+    ]
+  },
+  "finetune-v4": {
+    "epoch": 8,
+    "correct": 4,
+    "n": 13,
+    "per_class": {
+      "peppermint": {
+        "correct": 0,
+        "n": 4
+      },
+      "lemon_balm": {
+        "correct": 0,
+        "n": 4
+      },
+      "catnip": {
+        "correct": 4,
+        "n": 5
+      }
+    },
+    "predictions": [
+      {
+        "id": "316538586",
+        "actual": "peppermint",
+        "predicted": "tulsi"
+      },
+      {
+        "id": "229999237",
+        "actual": "peppermint",
+        "predicted": "brahmi"
+      },
+      {
+        "id": "156427431",
+        "actual": "peppermint",
+        "predicted": "catnip"
+      },
+      {
+        "id": "124276899",
+        "actual": "peppermint",
+        "predicted": "brahmi"
+      },
+      {
+        "id": "721932817",
+        "actual": "lemon_balm",
+        "predicted": "catnip"
+      },
+      {
+        "id": "709072868",
+        "actual": "lemon_balm",
+        "predicted": "catnip"
+      },
+      {
+        "id": "707127025",
+        "actual": "lemon_balm",
+        "predicted": "catnip"
+      },
+      {
+        "id": "701202557",
+        "actual": "lemon_balm",
+        "predicted": "catnip"
+      },
+      {
+        "id": "716720070",
+        "actual": "catnip",
+        "predicted": "catnip"
+      },
+      {
+        "id": "709918732",
+        "actual": "catnip",
+        "predicted": "catnip"
+      },
+      {
+        "id": "708704627",
+        "actual": "catnip",
+        "predicted": "brahmi"
+      },
+      {
+        "id": "705855073",
+        "actual": "catnip",
+        "predicted": "catnip"
+      },
+      {
+        "id": "703611392",
+        "actual": "catnip",
+        "predicted": "catnip"
+      }
+    ]
+  }
+}

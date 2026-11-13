@@ -1,0 +1,32 @@
+services:
+  app:
+    build: ..
+    environment:
+      MODEL_DIR: /models
+      ALLOW_EXPERIMENTAL_MODEL: '1'
+      PORT: '8000'
+    volumes:
+      - ${MODEL_PATH:?Set MODEL_PATH to the verified model directory}:/models:ro
+    ports:
+      - 127.0.0.1:8000:8000
+    restart: unless-stopped
+    mem_limit: 600m
+    pids_limit: 128
+    read_only: true
+    tmpfs:
+      - /tmp:size=32m,noexec,nosuid
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    logging:
+      driver: json-file
+      options:
+        max-size: 5m
+        max-file: '2'
+    healthcheck:
+      test: [CMD, python, -c, 'import urllib.request; urllib.request.urlopen("http://127.0.0.1:8000/api/health", timeout=5)']
+      interval: 30s
+      timeout: 8s
+      retries: 3
+      start_period: 60s

@@ -1,0 +1,16 @@
+{
+  "removed": [
+    [
+      "713488730",
+      "lemon_balm",
+      "contributor split conflict"
+    ]
+  ],
+  "counts": {
+    "val": 85,
+    "train": 471,
+    "test": 56,
+    "new_test": 65,
+    "mint_dev_val": 13
+  }
+}
