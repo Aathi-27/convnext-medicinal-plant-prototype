@@ -1,0 +1,13 @@
+{
+  "checkpoint": "mint-frozen-diagnostic/experimental.pt",
+  "checkpoint_sha256": "48e53d376f701aa8a97165b6a75988fe26478db2fceec82331da2f1218a409c1",
+  "selection": "Fresh pretrained frozen-feature head selected from development outcomes only: old validation70/85 and mint8/13 vs v4 66/85 and4/13; no Commons predictions used",
+  "pool_sha256": "6b02d6d937be5bf79d27a875d65484af0a1b15b7213948e1e5ae9bd9550a60ed",
+  "n": 46,
+  "protocol_fixed_before_predictions": true,
+  "pre_score_exclusions": {
+    "commons:61002019": "Contradictory taxonomic description (Minuartia) despite peppermint file name; no silent relabel",
+    "commons:177387990": "Generic appearance-only description without botanical species support; seedling borderline"
+  },
+  "rule": "Evaluate only this one checkpoint, no training/tuning on either Commons audit or99-photo audit. Report each class including failures. Community file/category labels not expert verified; small source-biased diagnostic, not benchmark accuracy or deployed reliability."
+}

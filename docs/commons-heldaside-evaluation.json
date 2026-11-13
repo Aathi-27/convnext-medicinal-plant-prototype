@@ -1,0 +1,439 @@
+{
+  "protocol": {
+    "checkpoint": "mint-frozen-diagnostic/experimental.pt",
+    "checkpoint_sha256": "48e53d376f701aa8a97165b6a75988fe26478db2fceec82331da2f1218a409c1",
+    "selection": "Fresh pretrained frozen-feature head selected from development outcomes only: old validation70/85 and mint8/13 vs v4 66/85 and4/13; no Commons predictions used",
+    "pool_sha256": "6b02d6d937be5bf79d27a875d65484af0a1b15b7213948e1e5ae9bd9550a60ed",
+    "n": 46,
+    "protocol_fixed_before_predictions": true,
+    "pre_score_exclusions": {
+      "commons:61002019": "Contradictory taxonomic description (Minuartia) despite peppermint file name; no silent relabel",
+      "commons:177387990": "Generic appearance-only description without botanical species support; seedling borderline"
+    },
+    "rule": "Evaluate only this one checkpoint, no training/tuning on either Commons audit or99-photo audit. Report each class including failures. Community file/category labels not expert verified; small source-biased diagnostic, not benchmark accuracy or deployed reliability."
+  },
+  "results": {
+    "n": 46,
+    "correct": 28,
+    "per_class": {
+      "tulsi": {
+        "n": 5,
+        "correct": 3
+      },
+      "neem": {
+        "n": 4,
+        "correct": 3
+      },
+      "turmeric": {
+        "n": 5,
+        "correct": 5
+      },
+      "ashwagandha": {
+        "n": 4,
+        "correct": 1
+      },
+      "brahmi": {
+        "n": 3,
+        "correct": 3
+      },
+      "bael": {
+        "n": 2,
+        "correct": 1
+      },
+      "peppermint": {
+        "n": 4,
+        "correct": 1
+      },
+      "lemon_balm": {
+        "n": 8,
+        "correct": 2
+      },
+      "stevia": {
+        "n": 8,
+        "correct": 6
+      },
+      "catnip": {
+        "n": 3,
+        "correct": 3
+      }
+    }
+  },
+  "deployment_ready": false,
+  "predictions": [
+    {
+      "id": "commons:49562756",
+      "label": "tulsi",
+      "prediction": "tulsi",
+      "confidence": 0.6997379064559937,
+      "source_url": "https://commons.wikimedia.org/wiki/File:A_Tulasi.jpg",
+      "correct": true
+    },
+    {
+      "id": "commons:60487416",
+      "label": "tulsi",
+      "prediction": "bael",
+      "confidence": 0.8754525184631348,
+      "source_url": "https://commons.wikimedia.org/wiki/File:Ayurvedic.jpg",
+      "correct": false
+    },
+    {
+      "id": "commons:113456727",
+      "label": "tulsi",
+      "prediction": "catnip",
+      "confidence": 0.35417377948760986,
+      "source_url": "https://commons.wikimedia.org/wiki/File:Close_Up_of_tusli_leaf.jpg",
+      "correct": false
+    },
+    {
+      "id": "commons:118300149",
+      "label": "tulsi",
+      "prediction": "tulsi",
+      "confidence": 0.7223294973373413,
+      "source_url": "https://commons.wikimedia.org/wiki/File:Holy_Basil_(Ocimum_tenuiflorum)_plant_captured_at_night.jpg",
+      "correct": true
+    },
+    {
+      "id": "commons:102777628",
+      "label": "tulsi",
+      "prediction": "tulsi",
+      "confidence": 0.8758698105812073,
+      "source_url": "https://commons.wikimedia.org/wiki/File:Holy_Basil_Plant.jpg",
+      "correct": true
+    },
+    {
+      "id": "commons:39590693",
+      "label": "neem",
+      "prediction": "neem",
+      "confidence": 0.9994107484817505,
+      "source_url": "https://commons.wikimedia.org/wiki/File:%22Neem_flower_for_rasam_making%22.jpg",
+      "correct": true
+    },
+    {
+      "id": "commons:119166122",
+      "label": "neem",
+      "prediction": "neem",
+      "confidence": 0.937930166721344,
+      "source_url": "https://commons.wikimedia.org/wiki/File:A_baby_neem_tree.jpg",
+      "correct": true
+    },
+    {
+      "id": "commons:138282527",
+      "label": "neem",
+      "prediction": "bael",
+      "confidence": 0.719125509262085,
+      "source_url": "https://commons.wikimedia.org/wiki/File:A_beautiful_Neem_plant.jpg",
+      "correct": false
+    },
+    {
+      "id": "commons:76736739",
+      "label": "neem",
+      "prediction": "neem",
+      "confidence": 0.7201701402664185,
+      "source_url": "https://commons.wikimedia.org/wiki/File:Azadirachta_indica_-_Neem_at_Tenkasi_2014_(1).jpg",
+      "correct": true
+    },
+    {
+      "id": "commons:136377445",
+      "label": "turmeric",
+      "prediction": "turmeric",
+      "confidence": 0.5091114640235901,
+      "source_url": "https://commons.wikimedia.org/wiki/File:At_Singapore_Botanic_Gardens_2023_19.jpg",
+      "correct": true
+    },
+    {
+      "id": "commons:151018439",
+      "label": "turmeric",
+      "prediction": "turmeric",
+      "confidence": 0.37520962953567505,
+      "source_url": "https://commons.wikimedia.org/wiki/File:Close-up_of_a_young_turmeric_plant_with_fresh_green_leaves.jpg",
+      "correct": true
+    },
+    {
+      "id": "commons:165901201",
+      "label": "turmeric",
+      "prediction": "turmeric",
+      "confidence": 0.9991317391395569,
+      "source_url": "https://commons.wikimedia.org/wiki/File:Close-up_of_Waigaon_Turmeric_plant.jpg",
+      "correct": true
+    },
+    {
+      "id": "commons:59578561",
+      "label": "turmeric",
+      "prediction": "turmeric",
+      "confidence": 0.999625563621521,
+      "source_url": "https://commons.wikimedia.org/wiki/File:Curcuma_domestica.jpg",
+      "correct": true
+    },
+    {
+      "id": "commons:167943387",
+      "label": "turmeric",
+      "prediction": "turmeric",
+      "confidence": 0.9980564117431641,
+      "source_url": "https://commons.wikimedia.org/wiki/File:Curcuma_longa,_Nativeplants_Botanical_Garden.jpg",
+      "correct": true
+    },
+    {
+      "id": "commons:40924403",
+      "label": "ashwagandha",
+      "prediction": "stevia",
+      "confidence": 0.9008296728134155,
+      "source_url": "https://commons.wikimedia.org/wiki/File:Withania_somnifera_01.jpg",
+      "correct": false
+    },
+    {
+      "id": "commons:60982786",
+      "label": "ashwagandha",
+      "prediction": "bael",
+      "confidence": 0.4487016797065735,
+      "source_url": "https://commons.wikimedia.org/wiki/File:Withania_somnifera_0zz.jpg",
+      "correct": false
+    },
+    {
+      "id": "commons:151161285",
+      "label": "ashwagandha",
+      "prediction": "stevia",
+      "confidence": 0.7905688285827637,
+      "source_url": "https://commons.wikimedia.org/wiki/File:Withania_somnifera_1DS-II_1-1807.jpg",
+      "correct": false
+    },
+    {
+      "id": "commons:61791501",
+      "label": "ashwagandha",
+      "prediction": "ashwagandha",
+      "confidence": 0.9807357788085938,
+      "source_url": "https://commons.wikimedia.org/wiki/File:Withania_somnifera_2017-05-23_1026.jpg",
+      "correct": true
+    },
+    {
+      "id": "commons:60602814",
+      "label": "brahmi",
+      "prediction": "brahmi",
+      "confidence": 0.8133862018585205,
+      "source_url": "https://commons.wikimedia.org/wiki/File:Bacopa_monnieri_2017-05-31_2505.jpg",
+      "correct": true
+    },
+    {
+      "id": "commons:163578600",
+      "label": "brahmi",
+      "prediction": "brahmi",
+      "confidence": 0.404751181602478,
+      "source_url": "https://commons.wikimedia.org/wiki/File:Bacopa_monnieri_growing_semi-submerged_(Philippines)_02.jpg",
+      "correct": true
+    },
+    {
+      "id": "commons:86838028",
+      "label": "brahmi",
+      "prediction": "brahmi",
+      "confidence": 0.9509566426277161,
+      "source_url": "https://commons.wikimedia.org/wiki/File:Bacopa_monnieri_kz01.jpg",
+      "correct": true
+    },
+    {
+      "id": "commons:90590893",
+      "label": "bael",
+      "prediction": "brahmi",
+      "confidence": 0.39651185274124146,
+      "source_url": "https://commons.wikimedia.org/wiki/File:%22Bael%22.jpg",
+      "correct": false
+    },
+    {
+      "id": "commons:158880219",
+      "label": "bael",
+      "prediction": "bael",
+      "confidence": 0.5234709978103638,
+      "source_url": "https://commons.wikimedia.org/wiki/File:Aegle_marmelos_157881855.jpg",
+      "correct": true
+    },
+    {
+      "id": "commons:50634535",
+      "label": "peppermint",
+      "prediction": "lemon_balm",
+      "confidence": 0.38929542899131775,
+      "source_url": "https://commons.wikimedia.org/wiki/File:Anacridium_aegyptium_nymph_01.jpg",
+      "correct": false
+    },
+    {
+      "id": "commons:38726060",
+      "label": "peppermint",
+      "prediction": "catnip",
+      "confidence": 0.6974833011627197,
+      "source_url": "https://commons.wikimedia.org/wiki/File:Mentha_piperata_Peppermint_%E1%83%91%E1%83%90%E1%83%A6%E1%83%98%E1%83%A1_%E1%83%9E%E1%83%98%E1%83%A2%E1%83%9C%E1%83%90.JPG",
+      "correct": false
+    },
+    {
+      "id": "commons:94224580",
+      "label": "peppermint",
+      "prediction": "lemon_balm",
+      "confidence": 0.4814864993095398,
+      "source_url": "https://commons.wikimedia.org/wiki/File:Mentha_piperita_-_Flickr_-_aspidoscelis_(1).jpg",
+      "correct": false
+    },
+    {
+      "id": "commons:85624890",
+      "label": "peppermint",
+      "prediction": "peppermint",
+      "confidence": 0.6153050661087036,
+      "source_url": "https://commons.wikimedia.org/wiki/File:Mentha_piperita-1-hanuman_temple-muluvi-yercaud-salem-India.jpg",
+      "correct": true
+    },
+    {
+      "id": "commons:34255494",
+      "label": "lemon_balm",
+      "prediction": "catnip",
+      "confidence": 0.6919329762458801,
+      "source_url": "https://commons.wikimedia.org/wiki/File:02014_Melissa_officinalis.JPG",
+      "correct": false
+    },
+    {
+      "id": "commons:81810682",
+      "label": "lemon_balm",
+      "prediction": "peppermint",
+      "confidence": 0.5986310243606567,
+      "source_url": "https://commons.wikimedia.org/wiki/File:Atlas_roslin_pl_Melisa_lekarska_6845_7402.jpg",
+      "correct": false
+    },
+    {
+      "id": "commons:81823176",
+      "label": "lemon_balm",
+      "prediction": "catnip",
+      "confidence": 0.7893552780151367,
+      "source_url": "https://commons.wikimedia.org/wiki/File:Atlas_roslin_pl_Melisa_lekarska_96_7402.jpg",
+      "correct": false
+    },
+    {
+      "id": "commons:46974827",
+      "label": "lemon_balm",
+      "prediction": "catnip",
+      "confidence": 0.5296264290809631,
+      "source_url": "https://commons.wikimedia.org/wiki/File:Die_Zitronenmelisse,_Melissa_officinalis_01.jpg",
+      "correct": false
+    },
+    {
+      "id": "commons:195120397",
+      "label": "lemon_balm",
+      "prediction": "lemon_balm",
+      "confidence": 0.5902026891708374,
+      "source_url": "https://commons.wikimedia.org/wiki/File:GT_Lemon_Balm.jpg",
+      "correct": true
+    },
+    {
+      "id": "commons:44360644",
+      "label": "lemon_balm",
+      "prediction": "neem",
+      "confidence": 0.8179972171783447,
+      "source_url": "https://commons.wikimedia.org/wiki/File:Hojas,_flores_y_frutos,_del_Toronjil,_en_ingl%C3%A9s_-lemon_balm-_(Melissa_officinalis).jpg",
+      "correct": false
+    },
+    {
+      "id": "commons:91938247",
+      "label": "lemon_balm",
+      "prediction": "lemon_balm",
+      "confidence": 0.5654448866844177,
+      "source_url": "https://commons.wikimedia.org/wiki/File:Katwijk_-_Citroenmelisse_(Melissa_officinalis).jpg",
+      "correct": true
+    },
+    {
+      "id": "commons:86361740",
+      "label": "lemon_balm",
+      "prediction": "catnip",
+      "confidence": 0.9411632418632507,
+      "source_url": "https://commons.wikimedia.org/wiki/File:Lemon_balm_1.jpg",
+      "correct": false
+    },
+    {
+      "id": "commons:154127485",
+      "label": "stevia",
+      "prediction": "bael",
+      "confidence": 0.39385539293289185,
+      "source_url": "https://commons.wikimedia.org/wiki/File:%22Stevia%22_plant.jpg",
+      "correct": false
+    },
+    {
+      "id": "commons:43405662",
+      "label": "stevia",
+      "prediction": "ashwagandha",
+      "confidence": 0.534156322479248,
+      "source_url": "https://commons.wikimedia.org/wiki/File:Das_S%C3%BC%C3%9Fkraut,_lat._Stevia_rebaudiana_01.jpg",
+      "correct": false
+    },
+    {
+      "id": "commons:149111870",
+      "label": "stevia",
+      "prediction": "stevia",
+      "confidence": 0.9056224822998047,
+      "source_url": "https://commons.wikimedia.org/wiki/File:Stevia_-_2024-06-05.jpg",
+      "correct": true
+    },
+    {
+      "id": "commons:73599418",
+      "label": "stevia",
+      "prediction": "stevia",
+      "confidence": 0.800541877746582,
+      "source_url": "https://commons.wikimedia.org/wiki/File:Stevia_pied_de_2_ans._Dimension_d%27une_feuille_de_la_base.jpg",
+      "correct": true
+    },
+    {
+      "id": "commons:45607373",
+      "label": "stevia",
+      "prediction": "stevia",
+      "confidence": 0.8427476286888123,
+      "source_url": "https://commons.wikimedia.org/wiki/File:Stevia_plant.jpg",
+      "correct": true
+    },
+    {
+      "id": "commons:61092129",
+      "label": "stevia",
+      "prediction": "stevia",
+      "confidence": 0.49628040194511414,
+      "source_url": "https://commons.wikimedia.org/wiki/File:Stevia_rebaudiana_4zz.jpg",
+      "correct": true
+    },
+    {
+      "id": "commons:69419249",
+      "label": "stevia",
+      "prediction": "stevia",
+      "confidence": 0.9206219911575317,
+      "source_url": "https://commons.wikimedia.org/wiki/File:Stevia_rebaudiana_kz01.jpg",
+      "correct": true
+    },
+    {
+      "id": "commons:50136887",
+      "label": "stevia",
+      "prediction": "stevia",
+      "confidence": 0.9097400903701782,
+      "source_url": "https://commons.wikimedia.org/wiki/File:Stevia_rebaudiana_RHu_01.JPG",
+      "correct": true
+    },
+    {
+      "id": "commons:43328336",
+      "label": "catnip",
+      "prediction": "catnip",
+      "confidence": 0.8055667877197266,
+      "source_url": "https://commons.wikimedia.org/wiki/File:Echte_Katzenminze_(Nepeta_cataria)_02.jpg",
+      "correct": true
+    },
+    {
+      "id": "commons:86673775",
+      "label": "catnip",
+      "prediction": "catnip",
+      "confidence": 0.936224102973938,
+      "source_url": "https://commons.wikimedia.org/wiki/File:Nepeta_cataria_2_RF.jpg",
+      "correct": true
+    },
+    {
+      "id": "commons:60998319",
+      "label": "catnip",
+      "prediction": "catnip",
+      "confidence": 0.9703512787818909,
+      "source_url": "https://commons.wikimedia.org/wiki/File:Nepeta_cataria_2zz.jpg",
+      "correct": true
+    }
+  ],
+  "caveats": [
+    "Small community-labeled Wikimedia source sample, not expert-certified or phone-photo benchmark",
+    "Cross-platform author aliases unresolved; SHA/dHash and normalized-name checks only",
+    "Audit now read; never train on these photos or select future checkpoints from this result",
+    "Softmax is not calibrated probability of botanical correctness",
+    "Previous99photo audit remains separate, not rerun"
+  ]
+}

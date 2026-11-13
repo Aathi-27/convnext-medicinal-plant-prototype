@@ -2,7 +2,7 @@
 import json,urllib.request,hashlib,zipfile,csv,io,time,concurrent.futures
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-rows=json.loads((ROOT/'data/dataset-v0.3/manifest.json').read_text());out=ROOT/'dataset-release';out.mkdir(exist_ok=True)
+rows=json.loads((ROOT/'data/dataset-v0.4/manifest.json').read_text());out=ROOT/'dataset-release';out.mkdir(exist_ok=True)
 def fetch(r):
  p=out/r['path'];p.parent.mkdir(parents=True,exist_ok=True)
  if not p.exists():
@@ -14,11 +14,11 @@ def fetch(r):
 with concurrent.futures.ThreadPoolExecutor(max_workers=4) as ex:list(ex.map(fetch,rows))
 assets=ROOT/'release-assets';assets.mkdir(exist_ok=True)
 for i,ids in enumerate([['ashwagandha','bael','brahmi','catnip'],['lemon_balm','neem','peppermint'],['stevia','tulsi','turmeric']],1):
- p=assets/f'medicinal-plant-dataset-v0.3-part{i}.zip'
+ p=assets/f'medicinal-plant-dataset-v0.4-part{i}.zip'
  with zipfile.ZipFile(p,'w',zipfile.ZIP_DEFLATED) as z:
   for r in rows:
    if r['species_id'] in ids:z.write(out/r['path'],r['path'])
-  for f in (ROOT/'data/dataset-v0.3').iterdir():
+  for f in (ROOT/'data/dataset-v0.4').iterdir():
    if f.is_file():z.write(f,f.name)
  print(p.name,p.stat().st_size,flush=True)
 (assets/'SHA256SUMS.txt').write_text(''.join(hashlib.sha256(p.read_bytes()).hexdigest()+'  '+p.name+'\n' for p in sorted(assets.glob('*.zip'))))
