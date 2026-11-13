@@ -12,7 +12,7 @@ The dated experiment sections below record earlier states, including failed audi
 
 ## What works locally
 Approved green/ivory React UI, upload/camera file selection, image validation,
-status/error/loading/result components, ten-species registry, API, source-linked
+automatic in-browser downscaling of large phone photos, status/error/loading/result components, ten-species registry, API, source-linked
 knowledge schema and genuine ConvNeXt training code. Missing weights fail closed.
 No uploaded images are persisted by the application.
 
