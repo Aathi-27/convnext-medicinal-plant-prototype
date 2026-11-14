@@ -76,7 +76,7 @@ function App(){
 <div className="candidate" key={c.id}>
 <div>{i+1}. {c.common_name}<small>{c.scientific_name}</small>
 <>{c.id&&<button className="button secondary" onClick={()=>reviewCandidate(c.id)}>Read notes about this possible match</button>}</>
-</div>{!externalResult&&<span>{(c.score*100).toFixed(1)}%</span>}</div>)}<p className="small">{externalResult?"Photo checked by the external AI service under the Analyze-leaf notice. AI self-ratings are not measured certainty.":"Local model scores are not calibrated certainty or proof of identity."}</p>{externalResult&&<>
+</div>{!externalResult&&<span>{(c.score*100).toFixed(1)}%</span>}</div>)}<p className="small">{externalResult?"AI self-ratings are not measured certainty.":"Local model scores are not calibrated certainty or proof of identity."}</p>{externalResult&&<>
 <p>{externalResult.suggestion.uncertainty}</p>
 <ul>{externalResult.suggestion.visible_features.map((x,i)=>
 <li key={i}>{x}</li>)}</ul>
