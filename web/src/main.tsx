@@ -77,10 +77,11 @@ function App(){
 <div>{i+1}. {c.common_name}<small>{c.scientific_name}</small>
 <>{c.id&&<button className="button secondary" onClick={()=>reviewCandidate(c.id)}>Read notes about this possible match</button>}</>
 </div><span>{(c.score*100).toFixed(1)}%</span></div>)}<p className="small">Local model scores are not calibrated certainty or proof of identity.</p>{externalResult&&<article className="knowledge">
-<h3>Why the local model may have predicted {externalResult.explanation.predicted_common_name}</h3>
+<h3>About the predicted class: {externalResult.explanation.predicted_common_name}</h3>
 <em>{externalResult.explanation.predicted_scientific_name}</em>
+<p className="notice">General class information from the API. The API did not analyze your photo and does not verify this prediction.</p>
 <p>{externalResult.explanation.explanation}</p>
-<p className="small">Visible features consistent with this prediction:</p>
+<p className="small">Typical identifying leaf features of this class:</p>
 <ul>{externalResult.explanation.supporting_features.map((x,i)=>
 <li key={i}>{x}</li>)}</ul>
 {externalResult.explanation.closest_alternatives.length>0&&<p className="small">Closest alternatives: {externalResult.explanation.closest_alternatives.join(', ')}</p>}
