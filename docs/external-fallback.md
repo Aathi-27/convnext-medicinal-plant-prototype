@@ -1,6 +1,6 @@
 # Optional photo check
 
-The research prototype retains the local ConvNeXt result and offers a second photo check. A top local score below0.70 makes the offer more prominent. This is a demo routing heuristic, not a calibrated confidence cutoff. A high local score can also be wrong, so the option remains available for every local result. The visitor must explicitly consent before each selected photo is forwarded. No photo is sent automatically.
+The research prototype runs the local ConvNeXt result first. When the top local score is below0.70, the photo is automatically forwarded for an external check. This is a demo routing heuristic, not a calibrated confidence cutoff. A high local score can also be wrong. The single Analyze flow carries one small processing line ("Photos are processed using AI services."); there is no separate permission step or result panel, at the owner's direction for this short-lived pitch demo. External output appears in the shared Possible matches layout with neutral wording and is never attributed to ConvNeXt.
 
 The same Possible matches layout displays either result. An external result does not change the local model or combine its scores with an external AI self-rating. Notes are available only for an exact scientific-name match to the ten-species registry. Selecting notes never confirms the uploaded plant's identity.
 
@@ -9,7 +9,7 @@ External processing details identify Groq as the processor. The account was veri
 ## Safety and privacy
 
 - Key is read from a server-only readonly mounted file, never frontend code or GitHub.
-- POST `/api/external-suggestion` requires `consent=true`. Invalid images fail before a transfer.
+- POST `/api/external-suggestion` still requires `consent=true`; the single Analyze flow sends it only under the visible notice at the button. Invalid images fail before a transfer.
 - JPEG/PNG/WebP only,10MB/10megapixel limits; EXIF orientation applied, resized to at most1280x1280 and clean JPEG re-encoded. No EXIF/GPS, original filename, public photo URL or account identity is sent.
 -3attempts/minute and60attempts/rolling24hours for the whole demo; SQLite stores timestamps only. Mount persistent state to avoid losing limits across restarts. Failed calls count.
 -25second provider timeout, fixed model, bounded response, strict output parsing, safe generic errors. No provider response-body/request/secret logging. Failed external checks preserve the local result.
