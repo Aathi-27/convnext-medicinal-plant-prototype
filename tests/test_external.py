@@ -19,10 +19,10 @@ def test_small_photo():
  with pytest.raises(external.InputError):external.prepare_photo(b.getvalue())
 
 def test_parser():
- d={'scientific_name':'Curcuma longa','common_name':'Turmeric','confidence_label':'low','uncertainty':'Leaves insufficient','visible_features':['green leaves']}
- r=external.parse_suggestion(json.dumps(d));assert r['provenance']=='external_ai';assert r['status']=='unverified';assert 'score' not in r['suggestion']
- for bad in ['not json','[]',json.dumps({**d,'confidence_label':'99%'}),json.dumps({**d,'scientific_name':['x']}),json.dumps({**d,'visible_features':['a']*9})]:
-  with pytest.raises(external.ExternalError):external.parse_suggestion(bad)
+ d={'explanation':'Trifoliate leaves consistent with Bael.','supporting_features':['three leaflets'],'closest_alternatives':['Brahmi']}
+ r=external.parse_explanation(json.dumps(d),'Bael','Aegle marmelos');assert r['provenance']=='external_ai';assert r['status']=='unverified';assert r['explanation']['predicted_common_name']=='Bael'
+ for bad in ['not json','[]',json.dumps({**d,'explanation':['x']}),json.dumps({**d,'supporting_features':['a']*9}),json.dumps({**d,'closest_alternatives':['a']*5})]:
+  with pytest.raises(external.ExternalError):external.parse_explanation(bad,'Bael','Aegle marmelos')
 
 def test_minute_and_daily_caps(tmp_path,monkeypatch):
  p=tmp_path/'limits.sqlite';monkeypatch.setenv('FALLBACK_STATE_DB',str(p))
@@ -37,7 +37,7 @@ def test_no_consent_no_transfer(monkeypatch):
  from fastapi.testclient import TestClient
  from app.main import app
  def fail(*a):raise AssertionError('must not transfer')
- monkeypatch.setattr(external,'identify',fail)
+ monkeypatch.setattr(external,'explain',fail)
  r=TestClient(app).post('/api/external-suggestion',files={'file':('leaf.jpg',photo(),'image/jpeg')})
  assert r.status_code==400
 
@@ -45,13 +45,15 @@ def test_api_validation_and_mock(monkeypatch):
  from fastapi.testclient import TestClient
  from app.main import app
  monkeypatch.setenv('EXTERNAL_FALLBACK_ENABLED','1');monkeypatch.setenv('GROQ_API_KEY_FILE','/not-read-in-mock')
- monkeypatch.setattr(external,'identify',lambda p:{'status':'unverified','provenance':'external_ai'})
+ monkeypatch.setattr(external,'explain',lambda p,c,s2:{'status':'unverified','provenance':'external_ai'})
  c=TestClient(app)
- assert c.post('/api/external-suggestion',data={'consent':'true'},files={'file':('leaf.jpg',photo(),'image/jpeg')}).json()['status']=='unverified'
+ assert c.post('/api/external-suggestion',data={'consent':'true','predicted_common':'Bael','predicted_scientific':'Aegle marmelos'},files={'file':('leaf.jpg',photo(),'image/jpeg')}).json()['status']=='unverified'
  assert c.post('/api/external-suggestion',data={'consent':'true'},files={'file':('bad.jpg',b'bad','image/jpeg')}).status_code==422
  assert c.post('/api/external-suggestion',headers={'sec-fetch-site':'cross-site'},data={'consent':'true'},files={'file':('leaf.jpg',photo(),'image/jpeg')}).status_code==403
 
 def test_fail_closed_missing_key(monkeypatch):
  monkeypatch.setenv('EXTERNAL_FALLBACK_ENABLED','1');monkeypatch.setenv('GROQ_API_KEY_FILE','/nonexistent-key')
- with pytest.raises(external.ExternalError) as e:external.identify(b'photo')
+ with pytest.raises(external.ExternalError) as e:external.explain(b'photo','Bael','Aegle marmelos')
  assert e.value.status==503
+ with pytest.raises(external.ExternalError) as e:external.explain(b'photo','','')
+ assert e.value.status==400
