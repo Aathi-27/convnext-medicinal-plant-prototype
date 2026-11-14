@@ -21,14 +21,14 @@ async def predict(file:UploadFile):
   result=await asyncio.to_thread(classifier.predict,image)
  return result
 @app.post('/api/external-suggestion')
-async def external_suggestion(request:Request,file:UploadFile,consent:bool=Form(False)):
+async def external_suggestion(request:Request,file:UploadFile,consent:bool=Form(False),predicted_common:str=Form(''),predicted_scientific:str=Form('')):
  if not consent:raise HTTPException(400,'Explicit consent is required before sending this photo to an external service.')
  if request.headers.get('sec-fetch-site')=='cross-site':raise HTTPException(403,'Open the demo directly to request an external check.')
  if not external.enabled():raise HTTPException(503,'External checks are not enabled. Local results are unchanged.')
  raw=await file.read(MAX_BYTES+1)
  try:
   photo=await asyncio.to_thread(external.prepare_photo,raw)
-  return await asyncio.to_thread(external.identify,photo)
+  return await asyncio.to_thread(external.explain,photo,predicted_common,predicted_scientific)
  except InputError as e:raise HTTPException(422,str(e))
  except external.ExternalError as e:raise HTTPException(e.status,e.message)
 @app.get('/api/knowledge/{species_id}')
